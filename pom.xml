@@ -13,6 +13,26 @@
     <name>Microsphere Build Project</name>
     <description>Microsphere Build Project</description>
 
+    <scm>
+        <url>https://github.com/microsphere-projects/microsphere-build</url>
+        <connection>scm:git:git://github.com/microsphere-projects/microsphere-build.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/microsphere-projects/microsphere-build.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>mercyblitz</id>
+            <name>Mercy Ma</name>
+            <email>mercyblitz@gmail.com</email>
+            <organization>Microsphere</organization>
+            <roles>
+                <role>lead</role>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <java.version>8</java.version>
