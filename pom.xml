@@ -16,7 +16,8 @@
     <scm>
         <url>https://github.com/microsphere-projects/microsphere-build</url>
         <connection>scm:git:git://github.com/microsphere-projects/microsphere-build.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/microsphere-projects/microsphere-build.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com/microsphere-projects/microsphere-build.git
+        </developerConnection>
     </scm>
 
     <developers>
@@ -45,7 +46,7 @@
         <docs.main>${project.artifactId}</docs.main>
         <docs.resources.dir>${project.build.directory}/build-docs</docs.resources.dir>
         <docs.classes.dir>${project.build.directory}/build-docs-classes</docs.classes.dir>
-        
+
         <!-- Sonar -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
@@ -68,6 +69,7 @@
         <maven-lombok-plugin.version>1.18.20.0</maven-lombok-plugin.version>
         <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
 
+        <flatten-maven-plugin.version>1.2.5</flatten-maven-plugin.version>
         <asciidoctor-maven-plugin.version>2.1.0</asciidoctor-maven-plugin.version>
         <docbkx-maven-plugin.version>2.0.17</docbkx-maven-plugin.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
@@ -267,6 +269,39 @@
                 </plugin>
 
                 <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>flatten-maven-plugin</artifactId>
+                    <version>${flatten-maven-plugin.version}</version>
+                    <inherited>true</inherited>
+                    <configuration>
+                        <updatePomFile>true</updatePomFile>
+                        <flattenMode>resolveCiFriendliesOnly</flattenMode>
+                        <updatePomFile>true</updatePomFile>
+                        <pomElements>
+                            <parent>expand</parent>
+                            <distributionManagement>remove</distributionManagement>
+                            <repositories>remove</repositories>
+                        </pomElements>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>flatten</id>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>flatten</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>flatten.clean</id>
+                            <phase>clean</phase>
+                            <goals>
+                                <goal>clean</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
                     <groupId>org.asciidoctor</groupId>
                     <artifactId>asciidoctor-maven-plugin</artifactId>
                     <version>${asciidoctor-maven-plugin.version}</version>
@@ -304,6 +339,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>flatten-maven-plugin</artifactId>
             </plugin>
         </plugins>
 
