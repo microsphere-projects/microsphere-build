@@ -10,7 +10,7 @@
     <version>${revision}</version>
     <packaging>pom</packaging>
 
-    <name>Microsphere Build Project</name>
+    <name>Microsphere :: Build</name>
     <description>Microsphere Build Project</description>
 
     <scm>
