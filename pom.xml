@@ -13,13 +13,6 @@
     <name>Microsphere :: Build</name>
     <description>Microsphere Build Project</description>
 
-    <scm>
-        <url>https://github.com/microsphere-projects/microsphere-build</url>
-        <connection>scm:git:git://github.com/microsphere-projects/microsphere-build.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/microsphere-projects/microsphere-build.git
-        </developerConnection>
-    </scm>
-
     <licenses>
         <license>
             <name>The Apache License, Version 2.0</name>
@@ -41,6 +34,13 @@
         </developer>
     </developers>
 
+    <scm>
+        <url>https://github.com/microsphere-projects/microsphere-build</url>
+        <connection>scm:git:git://github.com/microsphere-projects/microsphere-build.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/microsphere-projects/microsphere-build.git
+        </developerConnection>
+    </scm>
+    
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <java.version>8</java.version>
