@@ -36,11 +36,10 @@
 
     <scm>
         <url>https://github.com/microsphere-projects/microsphere-build</url>
-        <connection>scm:git:git://github.com/microsphere-projects/microsphere-build.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/microsphere-projects/microsphere-build.git
-        </developerConnection>
+        <connection>scm:git:https://github.com/microsphere-projects/microsphere-build.git</connection>
+        <developerConnection>scm:git:ssh://github.com/microsphere-projects/microsphere-build.git</developerConnection>
     </scm>
-    
+
     <properties>
         <revision>0.0.1-SNAPSHOT</revision>
         <java.version>8</java.version>
@@ -75,6 +74,7 @@
         <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
         <maven-lombok-plugin.version>1.18.20.0</maven-lombok-plugin.version>
         <maven-enforcer-plugin.version>3.0.0</maven-enforcer-plugin.version>
+        <maven-gpg-plugin.version>3.1.0</maven-gpg-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
 
         <flatten-maven-plugin.version>1.2.5</flatten-maven-plugin.version>
@@ -82,6 +82,7 @@
         <docbkx-maven-plugin.version>2.0.17</docbkx-maven-plugin.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
         <puppycrawl-tools-checkstyle.version>8.18</puppycrawl-tools-checkstyle.version>
+        <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
 
         <disable.checks>true</disable.checks>
         <maven-checkstyle-plugin.failsOnError>true</maven-checkstyle-plugin.failsOnError>
@@ -145,6 +146,20 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>${maven-jar-plugin.version}</version>
+                    <configuration>
+                        <archive>
+                            <addMavenDescriptor>true</addMavenDescriptor>
+                            <index>true</index>
+                            <manifest>
+                                <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+                                <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            </manifest>
+                            <manifestEntries>
+                                <Specification-Version>${project.version}</Specification-Version>
+                                <Implementation-Version>${project.version}</Implementation-Version>
+                            </manifestEntries>
+                        </archive>
+                    </configuration>
                 </plugin>
 
                 <plugin>
@@ -310,6 +325,12 @@
                 </plugin>
 
                 <plugin>
+                    <groupId>pl.project13.maven</groupId>
+                    <artifactId>git-commit-id-plugin</artifactId>
+                    <version>${git-commit-id-plugin.version}</version>
+                </plugin>
+
+                <plugin>
                     <groupId>org.asciidoctor</groupId>
                     <artifactId>asciidoctor-maven-plugin</artifactId>
                     <version>${asciidoctor-maven-plugin.version}</version>
@@ -339,6 +360,24 @@
                             </goals>
                         </execution>
                     </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-gpg-plugin</artifactId>
+                    <version>${maven-gpg-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
+                            <phase>verify</phase>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <keyname>${gpg.keyname}</keyname>
+                        <passphraseServerId>${gpg.keyname}</passphraseServerId>
+                    </configuration>
                 </plugin>
 
                 <plugin>
@@ -406,11 +445,23 @@
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-enforcer-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>pl.project13.maven</groupId>
+                        <artifactId>git-commit-id-plugin</artifactId>
                     </plugin>
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
