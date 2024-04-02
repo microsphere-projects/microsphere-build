@@ -22,7 +22,7 @@ jobs:
         java: [ '8', '11', '17', '21' ]
     steps:
     - uses: actions/checkout@v4
-    - name: Java ${{ matrix.Java }} (${{ matrix.distribution }})
+    - name: Java ${{ matrix.Java }}
       uses: actions/setup-java@v4
       with:
         distribution: 'temurin'
