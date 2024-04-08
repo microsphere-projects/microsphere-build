@@ -42,7 +42,7 @@
     </scm>
 
     <properties>
-        <revision>0.0.2</revision>
+        <revision>0.0.3</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -298,6 +298,8 @@
                     <version>${flatten-maven-plugin.version}</version>
                     <inherited>true</inherited>
                     <configuration>
+                        <embedBuildProfileDependencies>false</embedBuildProfileDependencies>
+                        <flattenDependencyMode>all</flattenDependencyMode>
                         <flattenMode>resolveCiFriendliesOnly</flattenMode>
                         <updatePomFile>true</updatePomFile>
                         <pomElements>
@@ -422,19 +424,6 @@
     </build>
 
     <profiles>
-
-        <profile>
-            <id>javadoc</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
         <profile>
             <id>release</id>
             <build>
