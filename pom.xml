@@ -298,7 +298,6 @@
                     <version>${flatten-maven-plugin.version}</version>
                     <inherited>true</inherited>
                     <configuration>
-                        <updatePomFile>true</updatePomFile>
                         <flattenMode>resolveCiFriendliesOnly</flattenMode>
                         <updatePomFile>true</updatePomFile>
                         <pomElements>
