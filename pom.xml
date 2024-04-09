@@ -42,7 +42,7 @@
     </scm>
 
     <properties>
-        <revision>0.0.5</revision>
+        <revision>0.0.6</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -89,6 +89,12 @@
         <flatten.dependency.mode>all</flatten.dependency.mode>
         <flatten.mode>resolveCiFriendliesOnly</flatten.mode>
         <updatePomFile>true</updatePomFile>
+        <flatten.pomElements.parent>expand</flatten.pomElements.parent>
+        <flatten.pomElements.properties>keep</flatten.pomElements.properties>
+        <flatten.pomElements.dependencyManagement>interpolate</flatten.pomElements.dependencyManagement>
+        <flatten.pomElements.dependencies>resolve</flatten.pomElements.dependencies>
+        <flatten.pomElements.distributionManagement>remove</flatten.pomElements.distributionManagement>
+        <flatten.pomElements.repositories>remove</flatten.pomElements.repositories>
 
         <!-- maven-checkstyle-plugin -->
         <disable.checks>true</disable.checks>
@@ -309,10 +315,12 @@
                         <flattenMode>${flatten.mode}</flattenMode>
                         <updatePomFile>${updatePomFile}</updatePomFile>
                         <pomElements>
-                            <parent>expand</parent>
-                            <dependencies>resolve</dependencies>
-                            <distributionManagement>remove</distributionManagement>
-                            <repositories>remove</repositories>
+                            <parent>${flatten.pomElements.parent}</parent>
+                            <properties>${flatten.pomElements.properties}</properties>
+                            <dependencyManagement>${flatten.pomElements.dependencyManagement}</dependencyManagement>
+                            <dependencies>${flatten.pomElements.dependencies}</dependencies>
+                            <distributionManagement>${flatten.pomElements.distributionManagement}</distributionManagement>
+                            <repositories>${flatten.pomElements.repositories}</repositories>
                         </pomElements>
                     </configuration>
                     <executions>
