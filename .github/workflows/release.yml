@@ -9,22 +9,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        java: [ '8' ]
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Java ${{ matrix.Java }}
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: ${{ matrix.java }}
-          cache: maven
-
       - name: Java Maven release
-        uses: qcastel/github-actions-maven-release@v1.12.20
+        uses: qcastel/github-actions-maven-release@v1.12.33
+        env:
+          JAVA_HOME: /usr/lib/jvm/java-1.8-openjdk/
         with:
           git-release-bot-name: "release-bot"
           git-release-bot-email: "release-bot@microsphere.io"
