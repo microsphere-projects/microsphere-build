@@ -17,6 +17,9 @@ jobs:
       - name: Java Maven release
         uses: qcastel/github-actions-maven-release@v1.0.3
         with:
+          env:
+            JAVA_HOME: /usr/lib/jvm/java-1.8-openjdk/
+            
           git-release-bot-name: "release-bot"
           git-release-bot-email: "release-bot@microsphere.io"
           release-branch-name: "main"
