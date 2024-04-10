@@ -444,6 +444,10 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
+                        <configuration>
+                            <scmCommentPrefix>[CI Skip]</scmCommentPrefix>
+                            <tagNameFormat>@{project.version}</tagNameFormat>
+                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
