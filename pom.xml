@@ -43,7 +43,7 @@
     </scm>
 
     <properties>
-        <revision>0.0.8-SNAPSHOT</revision>
+        <revision>0.0.9-SNAPSHOT</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
