@@ -15,7 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Java Maven release
+      - name: Java Maven Release
         uses: qcastel/github-actions-maven-release@v1.12.32
         env:
           JAVA_HOME: /usr/lib/jvm/java-1.8-openjdk/
@@ -23,6 +23,10 @@ jobs:
           git-release-bot-name: "release-bot"
           git-release-bot-email: "release-bot@microsphere.io"
           release-branch-name: "main"
+          version-major: true
+          version-minor: true
+          version-patch: true
+
           maven-args: "--batch-mode --update-snapshots -P release clean deploy"
           maven-options: "-Dmaven.plugin.validation=VERBOSE"
           maven-servers: ${{ secrets.MVN_REPO_SERVERS }}
