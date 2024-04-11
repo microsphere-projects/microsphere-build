@@ -23,12 +23,8 @@ jobs:
           git-release-bot-name: "release-bot"
           git-release-bot-email: "release-bot@microsphere.io"
           release-branch-name: "main"
-          version-major: true
-          version-minor: true
-          version-patch: true
 
           maven-args: "--batch-mode --update-snapshots -P release"
-          maven-options: "-Dmaven.plugin.validation=VERBOSE"
           maven-servers: ${{ secrets.MVN_REPO_SERVERS }}
 
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
