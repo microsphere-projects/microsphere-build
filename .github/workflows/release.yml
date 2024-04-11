@@ -27,7 +27,7 @@ jobs:
           version-minor: true
           version-patch: true
 
-          maven-args: "--batch-mode --update-snapshots -P release clean deploy"
+          maven-args: "--batch-mode --update-snapshots -P release"
           maven-options: "-Dmaven.plugin.validation=VERBOSE"
           maven-servers: ${{ secrets.MVN_REPO_SERVERS }}
 
