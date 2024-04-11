@@ -2,9 +2,9 @@ name: Release Version
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "release" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "release" ]
 
 jobs:
   build:
@@ -22,7 +22,6 @@ jobs:
         with:
           git-release-bot-name: "release-bot"
           git-release-bot-email: "release-bot@microsphere.io"
-          release-branch-name: "release"
 
           maven-args: "--batch-mode --update-snapshots -P release"
           maven-servers: ${{ secrets.MVN_REPO_SERVERS }}
