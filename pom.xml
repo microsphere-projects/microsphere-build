@@ -43,7 +43,7 @@
     </scm>
 
     <properties>
-        <revision>0.0.7-SNAPSHOT</revision>
+        <revision>0.0.8-SNAPSHOT</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -444,10 +444,6 @@
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-release-plugin</artifactId>
-                        <configuration>
-                            <scmCommentPrefix>[CI Skip]</scmCommentPrefix>
-                            <tagNameFormat>@{project.version}</tagNameFormat>
-                        </configuration>
                     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>

@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[CI Bot]')"
 
     steps:
       - name: Checkout
@@ -22,8 +23,8 @@ jobs:
           git-release-bot-name: "release-bot"
           git-release-bot-email: "release-bot@microsphere.io"
           release-branch-name: "main"
-
-          maven-args: "--batch-mode --update-snapshots -e -P release -Dmaven.plugin.validation=VERBOSE -Drevision=0.0.1-SNAPSHOT clean deploy"
+          maven-args: "--batch-mode --update-snapshots -P release clean deploy"
+          maven-options: "-Drevision=0.0.1-SNAPSHOT -Dmaven.plugin.validation=VERBOSE -DscmCommentPrefix=[CI Bot]"
           maven-servers: ${{ secrets.MVN_REPO_SERVERS }}
 
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
