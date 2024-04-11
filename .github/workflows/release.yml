@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "contains(github.event.head_commit.message, '[CI Bot]')"
+    if: "!contains(github.event.head_commit.message, '[CI Skip]')"
 
     steps:
       - name: Checkout

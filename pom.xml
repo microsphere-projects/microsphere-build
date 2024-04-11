@@ -5,7 +5,7 @@
 
     <groupId>io.github.microsphere-projects</groupId>
     <artifactId>microsphere-build</artifactId>
-    <version>0.0.10-SNAPSHOT</version>
+    <version>${revision}</version>
     <packaging>pom</packaging>
 
     <name>Microsphere :: Build</name>
@@ -41,7 +41,7 @@
     </scm>
 
     <properties>
-        <revision>0.0.9-SNAPSHOT</revision>
+        <revision>0.0.10-SNAPSHOT</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -197,7 +197,7 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>${maven-release-plugin.version}</version>
                     <configuration>
-                        <scmCommentPrefix>[CI Bot]</scmCommentPrefix>
+                        <scmCommentPrefix>[CI Skip]</scmCommentPrefix>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
                         <useReleaseProfile>false</useReleaseProfile>
                         <releaseProfiles>release</releaseProfiles>
