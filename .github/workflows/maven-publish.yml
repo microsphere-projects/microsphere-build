@@ -2,12 +2,12 @@ name: Maven Publish
 
 on:
   push:
-    branches: [ "release" ]
+    branches: [ 'release' ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[CI Skip]')"
+    if: ${{ !contains(github.event.head_commit.message, '[CI Skip]') }}
 
     steps:
       - name: Checkout Source
@@ -18,11 +18,11 @@ jobs:
         env:
           JAVA_HOME: /usr/lib/jvm/java-1.8-openjdk/
         with:
-          git-release-bot-name: "release-bot"
-          git-release-bot-email: "release-bot@microsphere.io"
-          release-branch-name: "release"
+          git-release-bot-name: 'release-bot'
+          git-release-bot-email: 'release-bot@microsphere.io'
+          release-branch-name: 'release'
 
-          maven-args: "--batch-mode --update-snapshots -P release"
+          maven-args: '--batch-mode --update-snapshots -P release'
           maven-servers: ${{ secrets.MVN_REPO_SERVERS }}
 
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
