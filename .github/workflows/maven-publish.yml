@@ -5,14 +5,10 @@ on:
     branches: [ 'release' ]
   workflow_dispatch:
     inputs:
-      confirmToPublish:
-        description: 'Confirm to publish the Maven Center Repository?'
+      revision:
+        description: 'The version to release'
         required: true
-        default: 'No'
-        type: choice
-        options:
-          - Yes
-          - No
+        default: '0.0.1-SNAPSHOT'
 
 jobs:
   build:
