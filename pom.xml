@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -74,6 +75,7 @@
         <maven-lombok-plugin.version>1.18.20.0</maven-lombok-plugin.version>
         <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
         <maven-gpg-plugin.version>3.2.2</maven-gpg-plugin.version>
+        <sign-maven-plugin.version>1.1.0</sign-maven-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
 
         <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
@@ -296,7 +298,7 @@
                             </goals>
                             <configuration>
                                 <rules>
-                                    <banDuplicatePomDependencyVersions />
+                                    <banDuplicatePomDependencyVersions/>
                                 </rules>
                             </configuration>
                         </execution>
@@ -318,7 +320,8 @@
                             <properties>${flatten.pomElements.properties}</properties>
                             <dependencyManagement>${flatten.pomElements.dependencyManagement}</dependencyManagement>
                             <dependencies>${flatten.pomElements.dependencies}</dependencies>
-                            <distributionManagement>${flatten.pomElements.distributionManagement}</distributionManagement>
+                            <distributionManagement>${flatten.pomElements.distributionManagement}
+                            </distributionManagement>
                             <repositories>${flatten.pomElements.repositories}</repositories>
                         </pomElements>
                     </configuration>
@@ -349,7 +352,8 @@
 
                     <configuration>
                         <generateGitPropertiesFile>true</generateGitPropertiesFile>
-                        <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
+                        <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties
+                        </generateGitPropertiesFilename>
                         <includeOnlyProperties>
                             <includeOnlyProperty>git.tags</includeOnlyProperty>
                             <includeOnlyProperty>git.branch</includeOnlyProperty>
@@ -413,6 +417,19 @@
                                     <arg>loopback</arg>
                                 </gpgArguments>
                             </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.simplify4u.plugins</groupId>
+                    <artifactId>sign-maven-plugin</artifactId>
+                    <version>${sign-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
                         </execution>
                     </executions>
                 </plugin>
@@ -493,6 +510,19 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>ci</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.simplify4u.plugins</groupId>
+                        <artifactId>sign-maven-plugin</artifactId>
+                        <!-- Key configuration can be provided by environment variables: SIGN_KEY, SIGN_KEY_ID, SIGN_KEY_PASS -->
                     </plugin>
                 </plugins>
             </build>
