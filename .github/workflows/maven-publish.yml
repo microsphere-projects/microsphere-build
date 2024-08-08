@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       confirmToPublish:
-        description: 'Confirm to publish the Maven Center Repository?'
+        description: 'Confirm to publish?'
         required: true
         default: 'No'
         type: string
