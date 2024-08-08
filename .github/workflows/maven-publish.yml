@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Maven Publish
-        uses: qcastel/github-actions-maven-release@v1.12.41
+        uses: qcastel/github-actions-maven-release@v1.12.32
         env:
           JAVA_HOME: /usr/lib/jvm/java-1.8-openjdk/
         with:
@@ -27,8 +27,8 @@ jobs:
           maven-args: "--batch-mode --update-snapshots -P release"
           maven-servers: ${{ secrets.MVN_REPO_SERVERS }}
 
-          ssh-private-key: ${{ secrets.OSS_SIGNING_KEY }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
           gpg-enabled: true
-          gpg-key-id: ${{ secrets.OSS_SIGNING_KEY_ID }}
-          gpg-key: ${{ secrets.OSS_SIGNING_KEY }}
+          gpg-key-id: ${{ secrets.GPG_KEY_ID }}
+          gpg-key: ${{ secrets.GPG_KEY }}
