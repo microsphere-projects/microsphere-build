@@ -431,6 +431,12 @@
                             </goals>
                         </execution>
                     </executions>
+                    <!--
+                     Key configuration can be provided by environment variables: SIGN_KEY, SIGN_KEY_ID, SIGN_KEY_PASS
+                     "SIGN_KEY" : the content of private key(not file path)
+                     "SIGN_KEY_ID": long-format key id, instead of short one
+                     "SIGN_KEY_PASS": the passphrase
+                    -->
                 </plugin>
 
                 <plugin>
@@ -521,7 +527,6 @@
                     <plugin>
                         <groupId>org.simplify4u.plugins</groupId>
                         <artifactId>sign-maven-plugin</artifactId>
-                        <!-- Key configuration can be provided by environment variables: SIGN_KEY, SIGN_KEY_ID, SIGN_KEY_PASS -->
                     </plugin>
                 </plugins>
             </build>
