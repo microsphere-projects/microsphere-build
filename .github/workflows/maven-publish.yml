@@ -9,10 +9,7 @@ on:
         description: 'Confirm to publish the Maven Center Repository?'
         required: true
         default: 'No'
-        type: choice
-        options:
-          - Yes
-          - No
+        type: string
 
 jobs:
   build:
