@@ -13,7 +13,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: ${{ !contains(github.event.head_commit.message, '[CI Skip]') }}
+    if: ${{ inputs.revision && !contains(github.event.head_commit.message, '[CI Skip]') }}
 
     steps:
       - name: Checkout Source
