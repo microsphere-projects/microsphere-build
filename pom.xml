@@ -5,7 +5,7 @@
 
     <groupId>io.github.microsphere-projects</groupId>
     <artifactId>microsphere-build</artifactId>
-    <version>0.0.19-SNAPSHOT</version>
+    <version>0.0.20-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Microsphere :: Build</name>
