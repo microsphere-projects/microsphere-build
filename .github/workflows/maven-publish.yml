@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       revision:
-        description: 'The version to release'
+        description: 'The version to publish'
         required: true
         default: '0.0.1-SNAPSHOT'
 
