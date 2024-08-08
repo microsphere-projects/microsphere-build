@@ -5,7 +5,7 @@
 
     <groupId>io.github.microsphere-projects</groupId>
     <artifactId>microsphere-build</artifactId>
-    <version>0.0.20-SNAPSHOT</version>
+    <version>0.0.22-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Microsphere :: Build</name>
@@ -74,6 +74,7 @@
         <maven-lombok-plugin.version>1.18.20.0</maven-lombok-plugin.version>
         <maven-enforcer-plugin.version>3.4.1</maven-enforcer-plugin.version>
         <maven-gpg-plugin.version>3.2.2</maven-gpg-plugin.version>
+        <sign-maven-plugin.version>1.1.0</sign-maven-plugin.version>
         <nexus-staging-maven-plugin.version>1.6.7</nexus-staging-maven-plugin.version>
 
         <flatten-maven-plugin.version>1.6.0</flatten-maven-plugin.version>
@@ -318,7 +319,8 @@
                             <properties>${flatten.pomElements.properties}</properties>
                             <dependencyManagement>${flatten.pomElements.dependencyManagement}</dependencyManagement>
                             <dependencies>${flatten.pomElements.dependencies}</dependencies>
-                            <distributionManagement>${flatten.pomElements.distributionManagement}</distributionManagement>
+                            <distributionManagement>${flatten.pomElements.distributionManagement}
+                            </distributionManagement>
                             <repositories>${flatten.pomElements.repositories}</repositories>
                         </pomElements>
                     </configuration>
@@ -349,7 +351,8 @@
 
                     <configuration>
                         <generateGitPropertiesFile>true</generateGitPropertiesFile>
-                        <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties</generateGitPropertiesFilename>
+                        <generateGitPropertiesFilename>${project.build.outputDirectory}/git.properties
+                        </generateGitPropertiesFilename>
                         <includeOnlyProperties>
                             <includeOnlyProperty>git.tags</includeOnlyProperty>
                             <includeOnlyProperty>git.branch</includeOnlyProperty>
@@ -407,6 +410,25 @@
                                 <goal>sign</goal>
                             </goals>
                             <phase>verify</phase>
+                            <configuration>
+                                <gpgArguments>
+                                    <arg>--pinentry-mode</arg>
+                                    <arg>loopback</arg>
+                                </gpgArguments>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.simplify4u.plugins</groupId>
+                    <artifactId>sign-maven-plugin</artifactId>
+                    <version>${sign-maven-plugin.version}</version>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>sign</goal>
+                            </goals>
                         </execution>
                     </executions>
                 </plugin>
@@ -487,6 +509,19 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>ci</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.simplify4u.plugins</groupId>
+                        <artifactId>sign-maven-plugin</artifactId>
+                        <!-- Key configuration can be provided by environment variables: SIGN_KEY, SIGN_KEY_ID, SIGN_KEY_PASS -->
                     </plugin>
                 </plugins>
             </build>
