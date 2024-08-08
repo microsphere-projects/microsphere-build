@@ -3,11 +3,20 @@ name: Maven Publish
 on:
   push:
     branches: [ "release" ]
+  workflow_dispatch:
+    inputs:
+      confirmToPublish:
+        description: 'Confirm to publish the Maven Center Repository?'
+        required: true
+        type: choice
+        options:
+          - Yes
+          - No
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, '[CI Skip]')"
+    if: ${{ inputs.confirmToPublish == 'Yes' }}
 
     steps:
       - name: Checkout Source
