@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.microsphere-projects</groupId>
     <artifactId>microsphere-build</artifactId>
-    <version>0.0.23-SNAPSHOT</version>
+    <version>0.0.23</version>
     <packaging>pom</packaging>
 
     <name>Microsphere :: Build</name>
@@ -38,7 +37,7 @@
         <url>git@github.com:microsphere-projects/microsphere-build.git</url>
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
-        <tag>HEAD</tag>
+        <tag>microsphere-build-0.0.23</tag>
     </scm>
 
     <properties>
@@ -104,8 +103,8 @@
         <maven-checkstyle-plugin.includeTestSourceDirectory>true</maven-checkstyle-plugin.includeTestSourceDirectory>
 
         <!-- Arguments Line -->
-        <jvm.argLine></jvm.argLine>
-        <jacoco.argLine></jacoco.argLine>
+        <jvm.argLine />
+        <jacoco.argLine />
 
     </properties>
 
@@ -309,7 +308,7 @@
                             </goals>
                             <configuration>
                                 <rules>
-                                    <banDuplicatePomDependencyVersions/>
+                                    <banDuplicatePomDependencyVersions />
                                 </rules>
                             </configuration>
                         </execution>
