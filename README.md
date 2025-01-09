@@ -82,7 +82,7 @@ Microsphere Build supports the Maven project building on Java 8+ TLS and Java 17
 
 ### 2.4 Project Settings
 
-#### 2.4.1 Defaults
+#### 2.4.1 Defaults Settings
 
 ##### 2.4.1.1 Resources Settings
 
@@ -106,26 +106,28 @@ Microsphere Build supports the Maven project building on Java 8+ TLS and Java 17
 </resources>
 ```
 
-##### 2.4.1.2 Maven Profile `java8+` Settings
+#### 2.4.2 Profiles Settings
+
+##### 2.4.2.1 Maven Profile `java8+` Settings
 
 [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) will be added the options `-Xdoclint:none`.
 
-##### 2.4.1.3 Maven Profile `java9+` Settings
+##### 2.4.2.2 Maven Profile `java9+` Settings
 
 [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/)'s property `maven.compiler.release` 
 references on the another property `${java.version}`.
 
-#### 2.4.1.4 Maven Profile `java11` Settings
+#### 2.4.2.3 Maven Profile `java11` Settings
 
 [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) will use the configuration `source`
 based on the property `${maven.compiler.source}`.
 
-#### 2.4.1.5 Maven Profile `java9-15` Settings
+#### 2.4.2.4 Maven Profile `java9-15` Settings
 
 [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) will append the argument line 
 `--illegal-access=permit` for accessing to internal classes
 
-### 2.4.1.6 Maven Profile `java16+` Settings
+### 2.4.2.5 Maven Profile `java16+` Settings
 
 [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) will append the argument line
 `--add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED` for accessing to 
@@ -133,7 +135,7 @@ JDK modules' classes.
 
 ## 3. Usage
 
-### Java 8+ Maven Project
+### 3.1 Java 8+ Maven Project
 
 The root project's pom.xml should set the parent as follows:
 
@@ -145,7 +147,7 @@ The root project's pom.xml should set the parent as follows:
     </parent>
 ```
 
-### Java 17+ Maven Project
+### 3.2 Java 17+ Maven Project
 
 The root project's pom.xml should set the parent as follows:
 
