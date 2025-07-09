@@ -55,10 +55,8 @@
         <docs.classes.dir>${project.build.directory}/build-docs-classes</docs.classes.dir>
 
         <maven-center-repository.host>central.sonatype.com</maven-center-repository.host>
-        <ossrh-staging-api.base-uri>https://ossrh-staging-api.${maven-center-repository.host}
-        </ossrh-staging-api.base-uri>
-        <ossrh-snapshots-repository.uri>https://${maven-center-repository.host}/repository/maven-snapshots/
-        </ossrh-snapshots-repository.uri>
+        <ossrh-staging-api.base-uri>https://ossrh-staging-api.${maven-center-repository.host}</ossrh-staging-api.base-uri>
+        <ossrh-snapshots-repository.uri>https://${maven-center-repository.host}/repository/maven-snapshots/</ossrh-snapshots-repository.uri>
         <ossrh-repository.uri>${ossrh-staging-api.base-uri}/service/local/staging/deploy/maven2/</ossrh-repository.uri>
 
         <!-- Sonar -->
@@ -90,7 +88,7 @@
         <asciidoctor-maven-plugin.version>3.2.0</asciidoctor-maven-plugin.version>
         <docbkx-maven-plugin.version>2.0.17</docbkx-maven-plugin.version>
         <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
-        <puppycrawl-tools-checkstyle.version>10.23.0</puppycrawl-tools-checkstyle.version>
+        <puppycrawl-tools-checkstyle.version>8.18</puppycrawl-tools-checkstyle.version>
         <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
         <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
 
