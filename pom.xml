@@ -77,9 +77,8 @@
         <maven-gpg-plugin.version>3.2.7</maven-gpg-plugin.version>
         <sign-maven-plugin.version>1.1.0</sign-maven-plugin.version>
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
-
         <flatten-maven-plugin.version>1.7.0</flatten-maven-plugin.version>
-        <asciidoctor-maven-plugin.version>3.1.1</asciidoctor-maven-plugin.version>
+        <asciidoctor-maven-plugin.version>3.2.0</asciidoctor-maven-plugin.version>
         <docbkx-maven-plugin.version>2.0.17</docbkx-maven-plugin.version>
         <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
         <puppycrawl-tools-checkstyle.version>10.23.0</puppycrawl-tools-checkstyle.version>
