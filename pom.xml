@@ -42,7 +42,7 @@
     </scm>
 
     <properties>
-        <revision>0.1.2-SNAPSHOT</revision>
+        <revision>0.2.0-SNAPSHOT</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -90,7 +90,7 @@
         <asciidoctor-maven-plugin.version>3.2.0</asciidoctor-maven-plugin.version>
         <docbkx-maven-plugin.version>2.0.17</docbkx-maven-plugin.version>
         <build-helper-maven-plugin.version>3.6.0</build-helper-maven-plugin.version>
-        <puppycrawl-tools-checkstyle.version>10.23.0</puppycrawl-tools-checkstyle.version>
+        <puppycrawl-tools-checkstyle.version>8.18</puppycrawl-tools-checkstyle.version>
         <git-commit-id-plugin.version>4.9.10</git-commit-id-plugin.version>
         <central-publishing-maven-plugin.version>0.8.0</central-publishing-maven-plugin.version>
 
@@ -112,8 +112,8 @@
         <maven-checkstyle-plugin.includeTestSourceDirectory>true</maven-checkstyle-plugin.includeTestSourceDirectory>
 
         <!-- Arguments Line -->
-        <jvm.argLine />
-        <jacoco.argLine />
+        <jvm.argLine/>
+        <jacoco.argLine/>
 
     </properties>
 
@@ -225,7 +225,8 @@
                     <version>${central-publishing-maven-plugin.version}</version>
                     <extensions>true</extensions>
                     <configuration>
-                        <publishingServerId>central</publishingServerId>
+                        <publishingServerId>ossrh</publishingServerId>
+                        <autoPublish>true</autoPublish>
                     </configuration>
                 </plugin>
 
@@ -570,6 +571,38 @@
         </profile>
 
         <profile>
+            <id>publish</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>pl.project13.maven</groupId>
+                        <artifactId>git-commit-id-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
             <id>ci</id>
             <build>
                 <plugins>
@@ -683,6 +716,9 @@
             <activation>
                 <jdk>[11,)</jdk>
             </activation>
+            <properties>
+                <puppycrawl-tools-checkstyle.version>10.23.0</puppycrawl-tools-checkstyle.version>
+            </properties>
             <build>
                 <pluginManagement>
                     <plugins>
@@ -756,5 +792,5 @@
             <url>${ossrh-repository.uri}</url>
         </repository>
     </distributionManagement>
-    
+
 </project>
