@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -53,6 +54,13 @@
         <docs.resources.dir>${project.build.directory}/build-docs</docs.resources.dir>
         <docs.classes.dir>${project.build.directory}/build-docs-classes</docs.classes.dir>
 
+        <maven-center-repository.host>central.sonatype.com</maven-center-repository.host>
+        <ossrh-staging-api.base-uri>https://ossrh-staging-api.${maven-center-repository.host}
+        </ossrh-staging-api.base-uri>
+        <ossrh-snapshots-repository.uri>https://${maven-center-repository.host}/repository/maven-snapshots/
+        </ossrh-snapshots-repository.uri>
+        <ossrh-repository.uri>${ossrh-staging-api.base-uri}/service/local/staging/deploy/maven2/</ossrh-repository.uri>
+
         <!-- Sonar -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
         <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
@@ -104,8 +112,8 @@
         <maven-checkstyle-plugin.includeTestSourceDirectory>true</maven-checkstyle-plugin.includeTestSourceDirectory>
 
         <!-- Arguments Line -->
-        <jvm.argLine />
-        <jacoco.argLine />
+        <jvm.argLine/>
+        <jacoco.argLine/>
 
     </properties>
 
@@ -218,6 +226,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <publishingServerId>central</publishingServerId>
+                        <autoPublish>true</autoPublish>
                     </configuration>
                 </plugin>
 
@@ -338,7 +347,7 @@
                             </goals>
                             <configuration>
                                 <rules>
-                                    <banDuplicatePomDependencyVersions />
+                                    <banDuplicatePomDependencyVersions/>
                                 </rules>
                             </configuration>
                         </execution>
@@ -487,7 +496,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <serverId>ossrh</serverId>
-                        <nexusUrl>https://ossrh-staging-api.central.sonatype.com/</nexusUrl>
+                        <nexusUrl>${ossrh-staging-api.base-uri}</nexusUrl>
                         <autoReleaseAfterClose>true</autoReleaseAfterClose>
                     </configuration>
                 </plugin>
@@ -556,6 +565,38 @@
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>publish</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-enforcer-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>pl.project13.maven</groupId>
+                        <artifactId>git-commit-id-plugin</artifactId>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.central</groupId>
+                        <artifactId>central-publishing-maven-plugin</artifactId>
                     </plugin>
                 </plugins>
             </build>
@@ -728,7 +769,7 @@
         <repository>
             <id>nexus</id>
             <name>nexus-snapshot</name>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <url>${ossrh-snapshots-repository.uri}</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -741,13 +782,12 @@
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <url>${ossrh-snapshots-repository.uri}</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/</url>
+            <url>${ossrh-repository.uri}</url>
         </repository>
     </distributionManagement>
-
 
 </project>
