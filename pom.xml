@@ -727,7 +727,7 @@
         <repository>
             <id>nexus</id>
             <name>nexus-snapshot</name>
-            <url>https://ossrh-staging-api.central.sonatype.com/content/repositories/snapshots</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -740,7 +740,7 @@
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://ossrh-staging-api.central.sonatype.com/content/repositories/snapshots</url>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
