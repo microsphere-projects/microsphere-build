@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
@@ -52,6 +53,13 @@
         <docs.main>${project.artifactId}</docs.main>
         <docs.resources.dir>${project.build.directory}/build-docs</docs.resources.dir>
         <docs.classes.dir>${project.build.directory}/build-docs-classes</docs.classes.dir>
+
+        <maven-center-repository.host>central.sonatype.com</maven-center-repository.host>
+        <ossrh-staging-api.base-uri>https://ossrh-staging-api.${maven-center-repository.host}
+        </ossrh-staging-api.base-uri>
+        <ossrh-snapshots-repository.uri>https://${maven-center-repository.host}/repository/maven-snapshots/
+        </ossrh-snapshots-repository.uri>
+        <ossrh-repository.uri>${ossrh-staging-api.base-uri}/service/local/staging/deploy/maven2/</ossrh-repository.uri>
 
         <!-- Sonar -->
         <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
@@ -338,7 +346,7 @@
                             </goals>
                             <configuration>
                                 <rules>
-                                    <banDuplicatePomDependencyVersions />
+                                    <banDuplicatePomDependencyVersions/>
                                 </rules>
                             </configuration>
                         </execution>
@@ -487,7 +495,7 @@
                     <extensions>true</extensions>
                     <configuration>
                         <serverId>ossrh</serverId>
-                        <nexusUrl>https://ossrh-staging-api.central.sonatype.com/</nexusUrl>
+                        <nexusUrl>${ossrh-staging-api.base-uri}</nexusUrl>
                         <autoReleaseAfterClose>true</autoReleaseAfterClose>
                     </configuration>
                 </plugin>
@@ -728,7 +736,7 @@
         <repository>
             <id>nexus</id>
             <name>nexus-snapshot</name>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <url>${ossrh-snapshots-repository.uri}</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>
@@ -741,13 +749,12 @@
     <distributionManagement>
         <snapshotRepository>
             <id>ossrh</id>
-            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <url>${ossrh-snapshots-repository.uri}</url>
         </snapshotRepository>
         <repository>
             <id>ossrh</id>
-            <url>https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/</url>
+            <url>${ossrh-repository.uri}</url>
         </repository>
     </distributionManagement>
-
-
+    
 </project>
