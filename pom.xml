@@ -86,7 +86,7 @@
         <maven-gpg-plugin.version>3.2.8</maven-gpg-plugin.version>
         <sign-maven-plugin.version>1.1.0</sign-maven-plugin.version>
         <nexus-staging-maven-plugin.version>1.7.0</nexus-staging-maven-plugin.version>
-        <flatten-maven-plugin.version>1.7.1</flatten-maven-plugin.version>
+        <flatten-maven-plugin.version>1.7.2</flatten-maven-plugin.version>
         <asciidoctor-maven-plugin.version>3.2.0</asciidoctor-maven-plugin.version>
         <docbkx-maven-plugin.version>2.0.17</docbkx-maven-plugin.version>
         <build-helper-maven-plugin.version>3.6.1</build-helper-maven-plugin.version>
