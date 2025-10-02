@@ -681,6 +681,16 @@
         </profile>
 
         <profile>
+            <id>java8</id>
+            <activation>
+                <jdk>1.8</jdk>
+            </activation>
+            <properties>
+                <puppycrawl-tools-checkstyle.version>8.18</puppycrawl-tools-checkstyle.version>
+            </properties>
+        </profile>
+
+        <profile>
             <id>java8+</id>
             <activation>
                 <jdk>[1.8,)</jdk>
@@ -716,9 +726,6 @@
             <activation>
                 <jdk>[11,)</jdk>
             </activation>
-            <properties>
-                <puppycrawl-tools-checkstyle.version>10.23.0</puppycrawl-tools-checkstyle.version>
-            </properties>
             <build>
                 <pluginManagement>
                     <plugins>
