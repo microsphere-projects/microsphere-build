@@ -681,9 +681,9 @@
         </profile>
 
         <profile>
-            <id>java8</id>
+            <id>puppycrawl-legacy</id>
             <activation>
-                <jdk>1.8</jdk>
+                <jdk>[1.8,11]</jdk>
             </activation>
             <properties>
                 <puppycrawl-tools-checkstyle.version>8.18</puppycrawl-tools-checkstyle.version>
