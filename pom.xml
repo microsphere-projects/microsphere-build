@@ -681,20 +681,13 @@
         </profile>
 
         <profile>
-            <id>puppycrawl-legacy</id>
-            <activation>
-                <jdk>[1.8,11)</jdk>
-            </activation>
-            <properties>
-                <puppycrawl-tools-checkstyle.version>8.18</puppycrawl-tools-checkstyle.version>
-            </properties>
-        </profile>
-
-        <profile>
             <id>java8+</id>
             <activation>
                 <jdk>[1.8,)</jdk>
             </activation>
+            <properties>
+                <puppycrawl-tools-checkstyle.version>9.3</puppycrawl-tools-checkstyle.version>
+            </properties>
             <build>
                 <pluginManagement>
                     <plugins>
@@ -722,10 +715,13 @@
         </profile>
 
         <profile>
-            <id>java11</id>
+            <id>java11+</id>
             <activation>
                 <jdk>[11,)</jdk>
             </activation>
+            <properties>
+                <puppycrawl-tools-checkstyle.version>10.26.1</puppycrawl-tools-checkstyle.version>
+            </properties>
             <build>
                 <pluginManagement>
                     <plugins>
@@ -764,6 +760,17 @@
                 </jvm.argLine>
             </properties>
         </profile>
+
+        <profile>
+            <id>java17+</id>
+            <activation>
+                <jdk>[17,)</jdk>
+            </activation>
+            <properties>
+                <puppycrawl-tools-checkstyle.version>11.1.0</puppycrawl-tools-checkstyle.version>
+            </properties>
+        </profile>
+
     </profiles>
 
     <reporting>
