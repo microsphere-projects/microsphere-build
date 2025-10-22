@@ -35,20 +35,20 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 #### Default Inherited Plugins
 
-- [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/)
-- [Maven Source Plugin](https://maven.apache.org/plugins/maven-source-plugin/)
-- [Flatten Maven Plugin](https://www.mojohaus.org/flatten-maven-plugin/)
+- [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) (3.14.1)
+- [Maven Source Plugin](https://maven.apache.org/plugins/maven-source-plugin/) (3.3.1)
+- [Flatten Maven Plugin](https://www.mojohaus.org/flatten-maven-plugin/) (1.7.3)
 
 #### Profile-Specific Plugins
 
 ##### Maven Profile `publish` Plugins (Recommended, since 0.2.0)
 
-- [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/)
-- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/)
-- [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/)
-- [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/)
-- [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin)
-- [Central Publishing Maven Plugin](https://central.sonatype.com/artifact/org.sonatype.central/central-publishing-maven-plugin)
+- [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) (3.12.0)
+- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.1.1)
+- [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.2)
+- [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) (3.2.8)
+- [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin) (4.9.10)
+- [Central Publishing Maven Plugin](https://central.sonatype.com/artifact/org.sonatype.central/central-publishing-maven-plugin) (0.9.0)
 
 > As of June 30, 2025 OSSRH has reached end of life and has been shut down. All OSSRH namespaces have been migrated to [Central Publisher Portal](https://central.sonatype.org/pages/ossrh-eol/).
 > 
@@ -56,34 +56,34 @@ Microsphere Build supports the Maven project building on Java TLS versions:
   
 ##### Maven Profile `release` Plugins
 
-- [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/)
-- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/)
-- [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/)
-- [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/)
-- [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin)
-- [Nexus Maven Plugin](https://github.com/sonatype/nexus-maven-plugins)
+- [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) (3.12.0)
+- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.1.1)
+- [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.2)
+- [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) (3.2.8)
+- [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin) (4.9.10)
+- [Nexus Maven Plugin](https://github.com/sonatype/nexus-maven-plugins) (1.7.0)
 
 > If you want to release the Java artifacts using OSSRH staging API, please see [Publishing By Using the Portal OSSRH Staging API](https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/).
 
 ##### Maven Profile `ci` Plugins
 
-- [Sign Maven Plugin](https://www.simplify4u.org/sign-maven-plugin/)
+- [Sign Maven Plugin](https://www.simplify4u.org/sign-maven-plugin/) (1.1.0)
 
 ##### Maven Profile `test` Plugins
 
-- [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/)
-- [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/)
-- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/)
+- [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) (3.5.4)
+- [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/) (3.6.0)
+- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) (3.5.4)
 
 ##### Maven Profile `coverage` Plugins
 
-- [Maven JaCoCo Plugin](https://www.eclemma.org/jacoco/)
+- [Maven JaCoCo Plugin](https://www.eclemma.org/jacoco/) (0.8.14)
 
 ##### Maven Profile `docs` Plugins
 
-- [Asciidoctor Maven Plugin](https://github.com/asciidoctor/asciidoctor-maven-plugin)
-- [Docbkx Maven Plugin](https://github.com/mimil/docbkx-tools)
-- [Build Helper Maven Plugin](https://www.mojohaus.org/build-helper-maven-plugin/)
+- [Asciidoctor Maven Plugin](https://github.com/asciidoctor/asciidoctor-maven-plugin) (3.2.0)
+- [Docbkx Maven Plugin](https://github.com/mimil/docbkx-tools) (2.0.17)
+- [Build Helper Maven Plugin](https://www.mojohaus.org/build-helper-maven-plugin/) (3.6.1)
 
 ### Profiles Management
 
@@ -164,7 +164,7 @@ JDK modules' classes.
 
 #### Maven Profile `java17+` Settings
 
-[Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/)'s version : 11.1.0
+[Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/)'s version : 12.1.0
 
 
 ## Usage
