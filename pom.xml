@@ -696,7 +696,7 @@
                             <artifactId>maven-javadoc-plugin</artifactId>
                             <inherited>true</inherited>
                             <configuration>
-                                <additionalOptions>-Xdoclint:none</additionalOptions>
+                                <doclint>none</doclint>
                             </configuration>
                         </plugin>
                     </plugins>
