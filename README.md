@@ -36,7 +36,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 #### Default Inherited Plugins
 
 - [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) (3.14.1)
-- [Maven Source Plugin](https://maven.apache.org/plugins/maven-source-plugin/) (3.3.1)
+- [Maven Source Plugin](https://maven.apache.org/plugins/maven-source-plugin/) (3.4.0)
 - [Flatten Maven Plugin](https://www.mojohaus.org/flatten-maven-plugin/) (1.7.3)
 
 #### Profile-Specific Plugins
@@ -44,7 +44,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 ##### Maven Profile `publish` Plugins (Recommended, since 0.2.0)
 
 - [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) (3.12.0)
-- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.1.1)
+- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.3.0)
 - [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.2)
 - [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) (3.2.8)
 - [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin) (4.9.10)
@@ -164,7 +164,7 @@ JDK modules' classes.
 
 #### Maven Profile `java17+` Settings
 
-[Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/)'s version : 12.1.0
+[Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/)'s version : 12.2.0
 
 
 ## Usage
@@ -177,6 +177,6 @@ The root project's pom.xml should set the parent as follows:
     <parent>
         <groupId>io.github.microsphere-projects</groupId>
         <artifactId>microsphere-build</artifactId>
-        <version>0.2.1</version>
+        <version>0.2.3</version>
     </parent>
 ```
