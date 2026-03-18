@@ -35,7 +35,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 #### Default Inherited Plugins
 
-- [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) (3.14.1)
+- [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) (3.15.0)
 - [Maven Source Plugin](https://maven.apache.org/plugins/maven-source-plugin/) (3.4.0)
 - [Flatten Maven Plugin](https://www.mojohaus.org/flatten-maven-plugin/) (1.7.3)
 
@@ -44,11 +44,11 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 ##### Maven Profile `publish` Plugins (Recommended, since 0.2.0)
 
 - [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) (3.12.0)
-- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.3.0)
+- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.3.1)
 - [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.2)
 - [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) (3.2.8)
 - [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin) (4.9.10)
-- [Central Publishing Maven Plugin](https://central.sonatype.com/artifact/org.sonatype.central/central-publishing-maven-plugin) (0.9.0)
+- [Central Publishing Maven Plugin](https://central.sonatype.com/artifact/org.sonatype.central/central-publishing-maven-plugin) (0.10.0)
 
 > As of June 30, 2025 OSSRH has reached end of life and has been shut down. All OSSRH namespaces have been migrated to [Central Publisher Portal](https://central.sonatype.org/pages/ossrh-eol/).
 > 
@@ -57,7 +57,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 ##### Maven Profile `release` Plugins
 
 - [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) (3.12.0)
-- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.1.1)
+- [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.3.1)
 - [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.2)
 - [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) (3.2.8)
 - [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin) (4.9.10)
@@ -71,9 +71,9 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 ##### Maven Profile `test` Plugins
 
-- [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) (3.5.4)
+- [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) (3.5.5)
 - [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/) (3.6.0)
-- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) (3.5.4)
+- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) (3.5.5)
 
 ##### Maven Profile `coverage` Plugins
 
