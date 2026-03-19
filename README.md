@@ -2,6 +2,7 @@
 
 [![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/microsphere-projects/microsphere-build)
 [![Maven Build](https://github.com/microsphere-projects/microsphere-build/actions/workflows/maven-build.yml/badge.svg)](https://github.com/microsphere-projects/microsphere-build/actions/workflows/maven-build.yml)
+[![Codecov](https://codecov.io/gh/microsphere-projects/microsphere-build/branch/main/graph/badge.svg)](https://app.codecov.io/gh/microsphere-projects/microsphere-build)
 ![Maven](https://img.shields.io/maven-central/v/io.github.microsphere-projects/microsphere-build.svg)
 ![License](https://img.shields.io/github/license/microsphere-projects/microsphere-build.svg)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/microsphere-projects/microsphere-build.svg)](http://isitmaintained.com/project/microsphere-projects/microsphere-build "Average time to resolve an issue")
