@@ -37,7 +37,7 @@ jobs:
           cache: maven
 
       - name: Publish package
-        run: ./mvnw
+        run: mvn
           --batch-mode
           --update-snapshots
           --file pom.xml
