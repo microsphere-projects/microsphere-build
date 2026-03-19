@@ -691,6 +691,7 @@
             </activation>
             <properties>
                 <puppycrawl-tools-checkstyle.version>9.3</puppycrawl-tools-checkstyle.version>
+                <asciidoctor-maven-plugin.version>2.2.6</asciidoctor-maven-plugin.version>
             </properties>
             <build>
                 <pluginManagement>
@@ -725,6 +726,7 @@
             </activation>
             <properties>
                 <puppycrawl-tools-checkstyle.version>10.26.1</puppycrawl-tools-checkstyle.version>
+                <asciidoctor-maven-plugin.version>3.2.0</asciidoctor-maven-plugin.version>
             </properties>
             <build>
                 <pluginManagement>
