@@ -11,6 +11,10 @@
 
     <name>Microsphere :: Build</name>
     <description>Microsphere Build Project</description>
+
+    <modules>
+        <module>microsphere-build-example</module>
+    </modules>
     <url>https://github.com/microsphere-projects/microsphere-build</url>
 
     <licenses>
