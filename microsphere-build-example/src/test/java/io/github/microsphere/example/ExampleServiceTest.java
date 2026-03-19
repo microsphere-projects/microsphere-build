@@ -16,10 +16,11 @@
  */
 package io.github.microsphere.example;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Unit tests for {@link ExampleService}.
@@ -39,14 +40,14 @@ public class ExampleServiceTest {
         assertEquals("Hello, Microsphere!", service.greet("Microsphere"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testGreetWithNullName() {
-        service.greet(null);
+        assertThrows(IllegalArgumentException.class, () -> service.greet(null));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testGreetWithEmptyName() {
-        service.greet("");
+        assertThrows(IllegalArgumentException.class, () -> service.greet(""));
     }
 
     @Test
