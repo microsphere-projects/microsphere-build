@@ -32,4 +32,4 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots --file pom.xml test --activate-profiles test,coverage
+        run: ./mvnw --batch-mode --update-snapshots --file pom.xml test --activate-profiles test,coverage
