@@ -11,6 +11,10 @@
 
     <name>Microsphere :: Build</name>
     <description>Microsphere Build Project</description>
+
+    <modules>
+        <module>microsphere-build-example</module>
+    </modules>
     <url>https://github.com/microsphere-projects/microsphere-build</url>
 
     <licenses>
@@ -42,7 +46,7 @@
     </scm>
 
     <properties>
-        <revision>0.2.3-SNAPSHOT</revision>
+        <revision>0.2.5-SNAPSHOT</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -687,6 +691,7 @@
             </activation>
             <properties>
                 <puppycrawl-tools-checkstyle.version>9.3</puppycrawl-tools-checkstyle.version>
+                <asciidoctor-maven-plugin.version>2.2.6</asciidoctor-maven-plugin.version>
             </properties>
             <build>
                 <pluginManagement>
@@ -721,6 +726,7 @@
             </activation>
             <properties>
                 <puppycrawl-tools-checkstyle.version>10.26.1</puppycrawl-tools-checkstyle.version>
+                <asciidoctor-maven-plugin.version>3.2.0</asciidoctor-maven-plugin.version>
             </properties>
             <build>
                 <pluginManagement>
