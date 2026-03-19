@@ -1,0 +1,90 @@
+= Microsphere Build Example
+:doctype: article
+:toc: left
+:icons: font
+:source-highlighter: highlightjs
+
+== Overview
+
+The `microsphere-build-example` module is a minimal Java project that acts as a
+sub-module of `microsphere-build`. Its purpose is to exercise the profiles and
+Maven plugins declared in the parent POM.
+
+== Build Profiles
+
+=== Manual Profiles
+
+[cols="1,3", options="header"]
+|===
+| Profile | Description
+
+| `publish`
+| Signs and publishes artifacts to Maven Central via the
+  `central-publishing-maven-plugin` and `maven-gpg-plugin`.
+
+| `ci`
+| Signs artifacts in CI environments using the `sign-maven-plugin` with
+  credentials supplied through environment variables.
+
+| `test`
+| Activates `maven-surefire-plugin`, `maven-failsafe-plugin`, and
+  `maven-checkstyle-plugin` for full test and style verification.
+
+| `coverage`
+| Activates `jacoco-maven-plugin` to instrument tests and produce coverage
+  reports.
+
+| `docs`
+| Processes AsciiDoc sources in `src/docs/asciidoc` into HTML5 output using
+  `asciidoctor-maven-plugin`.
+|===
+
+=== JDK-Activated Profiles
+
+[cols="1,2,3", options="header"]
+|===
+| Profile | JDK Range | Effect
+
+| `java8+`
+| JDK ≥ 8
+| Disables Javadoc linting (`-doclint none`).
+
+| `java9+`
+| JDK ≥ 9
+| Sets `maven.compiler.release` for cross-compilation.
+
+| `java11+`
+| JDK ≥ 11
+| Configures Javadoc `source` level; upgrades Checkstyle.
+
+| `java9-15`
+| JDK 9–15
+| Adds `--illegal-access=permit` to the JVM argument line.
+
+| `java16+`
+| JDK ≥ 16
+| Adds `--add-opens` JVM flags required by reflection-heavy code.
+
+| `java17+`
+| JDK ≥ 17
+| Upgrades Checkstyle to a JDK-17-compatible version.
+|===
+
+== Usage
+
+Build the full project from the repository root:
+
+[source,shell]
+----
+# Default build
+mvn clean install
+
+# Enable test and coverage profiles
+mvn clean verify -P test,coverage
+
+# Generate documentation
+mvn generate-resources -P docs
+
+# Publish artifacts (requires GPG key and OSSRH credentials)
+mvn deploy -P publish
+----
