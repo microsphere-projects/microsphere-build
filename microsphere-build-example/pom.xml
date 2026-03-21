@@ -16,12 +16,15 @@
 
     <name>Microsphere :: Build :: Example</name>
     <description>Microsphere Build Example Project - validates profiles and Maven plugins</description>
+    <properties>
+        <junit.version>6.0.3</junit.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.14.3</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -52,6 +55,15 @@
                 </plugins>
             </build>
         </profile>
-    </profiles>
 
+        <profile>
+            <id>java8-16</id>
+            <activation>
+                <jdk>[1.8,17)</jdk>
+            </activation>
+            <properties>
+                <junit.version>5.14.3</junit.version>
+            </properties>
+        </profile>
+    </profiles>
 </project>
