@@ -1,0 +1,50 @@
+# This workflow publishes all markdown files from the 'wiki' directory
+# to the project's GitHub Wiki whenever they are updated on the main branch.
+#
+# Prerequisites:
+#   The GitHub Wiki must be initialized with at least one page via the
+#   repository's web UI before this workflow can push to it.
+
+name: Publish Wiki
+
+on:
+  push:
+    branches: [ 'main' ]
+    paths:
+      - 'wiki/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-wiki:
+    name: Publish Wiki Content
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v5
+
+      - name: Checkout Wiki Repository
+        uses: actions/checkout@v5
+        with:
+          repository: ${{ github.repository }}.wiki
+          path: .wiki
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync Wiki Content
+        run: |
+          rsync -av --include='*.md' --exclude='*' --delete wiki/ .wiki/
+
+      - name: Commit and Push
+        working-directory: .wiki
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "No wiki changes to commit"
+          else
+            git commit -m "docs: sync wiki content from repository"
+            git push
+          fi
