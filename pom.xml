@@ -108,6 +108,9 @@
         <flatten.pomElements.dependencies>resolve</flatten.pomElements.dependencies>
         <flatten.pomElements.distributionManagement>remove</flatten.pomElements.distributionManagement>
         <flatten.pomElements.repositories>remove</flatten.pomElements.repositories>
+        <flatten.pomElements.url>resolve</flatten.pomElements.url>
+        <flatten.pomElements.scm>resolve</flatten.pomElements.scm>
+        <flatten.pomElements.developers>resolve</flatten.pomElements.developers>
 
         <!-- maven-checkstyle-plugin -->
         <disable.checks>true</disable.checks>
@@ -376,6 +379,9 @@
                             <distributionManagement>${flatten.pomElements.distributionManagement}
                             </distributionManagement>
                             <repositories>${flatten.pomElements.repositories}</repositories>
+                            <url>${flatten.pomElements.url}</url>
+                            <scm>${flatten.pomElements.scm}</scm>
+                            <developers>${flatten.pomElements.developers}</developers>
                         </pomElements>
                     </configuration>
                     <executions>
