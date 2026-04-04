@@ -93,12 +93,25 @@ These properties control how the Flatten Maven Plugin transforms the POM before 
 | `flatten.pomElements.dependencies` | `resolve` | How to handle `<dependencies>` |
 | `flatten.pomElements.distributionManagement` | `remove` | How to handle `<distributionManagement>` |
 | `flatten.pomElements.repositories` | `remove` | How to handle `<repositories>` |
+| `flatten.pomElements.url` | `resolve` | How to handle `<url>` (inherits from parent when not set in child) |
+| `flatten.pomElements.scm` | `resolve` | How to handle `<scm>` (inherits SCM URL from parent when not set in child) |
+| `flatten.pomElements.developers` | `resolve` | How to handle `<developers>` (inherits from parent when not set in child) |
 
 **Example — keeping repositories in the flattened POM:**
 
 ```xml
 <properties>
     <flatten.pomElements.repositories>keep</flatten.pomElements.repositories>
+</properties>
+```
+
+**Example — removing Project URL, SCM and Developers from the flattened POM:**
+
+```xml
+<properties>
+    <flatten.pomElements.url>remove</flatten.pomElements.url>
+    <flatten.pomElements.scm>remove</flatten.pomElements.scm>
+    <flatten.pomElements.developers>remove</flatten.pomElements.developers>
 </properties>
 ```
 
