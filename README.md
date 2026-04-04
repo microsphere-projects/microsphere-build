@@ -165,7 +165,7 @@ JDK modules' classes.
 
 #### Maven Profile `java17+` Settings
 
-[Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/)'s version : 12.2.0
+[Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/)'s version : 13.4.0
 
 
 ## Usage
