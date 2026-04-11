@@ -14,25 +14,27 @@ on:
   workflow_dispatch:
     inputs:
       revision:
-        description: 'The version to publish (must match ${major}.${minor}.${patch})'
+        description: 'The version to publish'
         required: true
         default: '${major}.${minor}.${patch}'
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    if:  ${{ inputs.revision }}
+    permissions:
+      contents: read
+    if: ${{ inputs.revision }}
     steps:
-      - name: Checkout Source
-        uses: actions/checkout@v5
-
       - name: Validate version format
         run: |
           if ! echo "${{ inputs.revision }}" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
             echo "Error: version '${{ inputs.revision }}' does not match the required pattern major.minor.patch"
             exit 1
           fi
-          
+
+      - name: Checkout Source
+        uses: actions/checkout@v5
+
       - name: Setup Maven Central Repository
         uses: actions/setup-java@v5
         with:
@@ -55,7 +57,7 @@ jobs:
         env:
           MAVEN_USERNAME: ${{ secrets.OSS_SONATYPE_USERNAME }}
           MAVEN_PASSWORD: ${{ secrets.OSS_SONATYPE_PASSWORD }}
-          SIGN_KEY_ID:  ${{ secrets.OSS_SIGNING_KEY_ID_LONG }}
+          SIGN_KEY_ID: ${{ secrets.OSS_SIGNING_KEY_ID_LONG }}
           SIGN_KEY: ${{ secrets.OSS_SIGNING_KEY }}
           SIGN_KEY_PASS: ${{ secrets.OSS_SIGNING_PASSWORD }}
 
