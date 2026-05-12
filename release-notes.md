@@ -15,4 +15,20 @@
 ## Other Changes
 - Regular merges of `main` into the release branch for synchronization. ([Multiple commits with `[skip ci]`](https://example.com)) 
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.6...0.2.7
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.6...0.2.7## v0.2.8
+
+# Release Notes - Version 0.2.8
+
+## Dependency Updates
+- **Checkstyle:** Bumped `com.puppycrawl.tools:checkstyle` from `13.4.0` to `13.4.2`. ([#162](https://github.com/microsphere-projects/commit/d4dc0bb))
+- **Maven Wrapper:**  
+  - Updated Maven wrapper to version `3.9.15` (switched to Aliyun mirror).  
+  - Previous update to Maven wrapper version `3.9.14`.  
+
+## Build and Workflow Enhancements
+- Updated Maven wrapper to use **Maven Central** for the wrapper distribution URL.  
+- Set workflow permissions and enabled skip-ahead sync for improved CI/CD pipeline performance.  
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.7...0.2.8
