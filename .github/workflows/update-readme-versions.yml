@@ -1,0 +1,106 @@
+# This workflow updates the Maven plugin versions in README.md whenever
+# pom.xml is changed on the main or dev branches (e.g. by Dependabot).
+# It parses the version properties from pom.xml and rewrites the version
+# numbers inline in README.md, then commits the result back.
+
+name: Update README Plugin Versions
+
+on:
+  push:
+    branches: [ 'main', 'dev' ]
+    paths:
+      - 'pom.xml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    name: Sync plugin versions from pom.xml to README.md
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v5
+
+      - name: Update README.md versions
+        run: |
+          python3 << 'PYEOF'
+          import xml.etree.ElementTree as ET
+          import re
+          import sys
+
+          NS = 'http://maven.apache.org/POM/4.0.0'
+
+          tree = ET.parse('pom.xml')
+          root = tree.getroot()
+
+          props_elem = root.find(f'{{{NS}}}properties')
+          if props_elem is None:
+              print('ERROR: <properties> element not found in pom.xml', file=sys.stderr)
+              sys.exit(1)
+          props = {}
+          for prop in props_elem:
+              props[prop.tag.replace(f'{{{NS}}}', '')] = (prop.text or '').strip()
+
+          # Mapping: pom.xml property name -> display name used in README.md
+          mapping = {
+              'maven-compiler-plugin.version':          'Maven Compiler Plugin',
+              'maven-source-plugin.version':            'Maven Source Plugin',
+              'flatten-maven-plugin.version':           'Flatten Maven Plugin',
+              'maven-javadoc-plugin.version':           'Maven JavaDoc Plugin',
+              'maven-release-plugin.version':           'Maven Release Plugin',
+              'maven-enforcer-plugin.version':          'Maven Enforce Plugin',
+              'maven-gpg-plugin.version':               'Maven GPG Plugin',
+              'git-commit-id-plugin.version':           'Git Commit Id Plugin',
+              'central-publishing-maven-plugin.version':'Central Publishing Maven Plugin',
+              'maven-failsafe-plugin.version':          'Maven Failsafe Plugin',
+              'maven-checkstyle-plugin.version':        'Maven Checkstyle Plugin',
+              'maven-surefire-plugin.version':          'Maven Surefire Plugin',
+              'jacoco-maven-plugin.version':            'Maven JaCoCo Plugin',
+              'asciidoctor-maven-plugin.version':       'Asciidoctor Maven Plugin',
+              'docbkx-maven-plugin.version':            'Docbkx Maven Plugin',
+              'build-helper-maven-plugin.version':      'Build Helper Maven Plugin',
+              'sign-maven-plugin.version':              'Sign Maven Plugin',
+              'nexus-staging-maven-plugin.version':     'Nexus Maven Plugin',
+          }
+
+          with open('README.md', 'r') as f:
+              content = f.read()
+
+          updated = []
+          for prop_name, display_name in mapping.items():
+              version = props.get(prop_name)
+              if not version:
+                  print(f'WARNING: property {prop_name!r} not found in pom.xml', file=sys.stderr)
+                  continue
+              pattern = r'(\[' + re.escape(display_name) + r'\]\([^)]+\)) \([\d.]+\)'
+              new_content, count = re.subn(pattern, r'\1 (' + version + ')', content)
+              if count:
+                  content = new_content
+                  updated.append(f'{display_name} -> {version} ({count} occurrence(s))')
+              else:
+                  print(f'WARNING: {display_name!r} not found in README.md', file=sys.stderr)
+
+          with open('README.md', 'w') as f:
+              f.write(content)
+
+          if updated:
+              print('Updated plugin versions in README.md:')
+              for item in updated:
+                  print(f'  {item}')
+          else:
+              print('No plugin versions needed updating in README.md.')
+          PYEOF
+
+      - name: Commit and push README.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "No README.md changes to commit"
+          else
+            git commit -m "docs: sync plugin versions in README.md from pom.xml [skip ci]"
+            git push
+          fi
