@@ -46,7 +46,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 - [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) (3.12.0)
 - [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.3.1)
-- [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.2)
+- [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.3)
 - [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) (3.2.8)
 - [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin) (4.9.10)
 - [Central Publishing Maven Plugin](https://central.sonatype.com/artifact/org.sonatype.central/central-publishing-maven-plugin) (0.10.0)
@@ -59,7 +59,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 - [Maven JavaDoc Plugin](https://maven.apache.org/plugins/maven-javadoc-plugin/) (3.12.0)
 - [Maven Release Plugin](https://maven.apache.org/plugins/maven-release-plugin/) (3.3.1)
-- [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.2)
+- [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.3)
 - [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) (3.2.8)
 - [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin) (4.9.10)
 - [Nexus Maven Plugin](https://github.com/sonatype/nexus-maven-plugins) (1.7.0)
