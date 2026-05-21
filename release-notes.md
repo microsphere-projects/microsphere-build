@@ -31,4 +31,24 @@
 
 ---
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.7...0.2.8
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.7...0.2.8## v0.2.9
+
+# Release Notes - Version 0.2.9
+
+## New Features
+- **Add Maven Version Sync Workflow**: Introduced a workflow to sync Maven plugin versions from `pom.xml` to `README.md` for consistency. ([#29d120d](https://github.com/microsphere-projects/commit/29d120d))
+
+## Documentations
+- **README Update**: Removed issue resolution badges. ([#d11eaf6](https://github.com/microsphere-projects/commit/d11eaf6))
+
+## Dependency Updates
+- **JUnit Jupiter**: Upgraded from `6.0.3` to `6.1.0`. ([#42c2166](https://github.com/microsphere-projects/commit/3812b05))
+- **Maven Enforcer Plugin**: Upgraded from `3.6.2` to `3.6.3`. ([#78cb281](https://github.com/microsphere-projects/commit/df50480))
+
+## Build and Workflow Enhancements
+- Improved Maven workflows in GitHub Actions for better pipeline efficiency. ([#fc78b5a](https://github.com/microsphere-projects/commit/fc78b5a))
+- Updated `maven-publish.yml` to align with publishing processes. ([#09c0894](https://github.com/microsphere-projects/commit/09c0894))
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.8...0.2.9
