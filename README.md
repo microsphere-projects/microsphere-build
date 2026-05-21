@@ -5,8 +5,7 @@
 [![Codecov](https://codecov.io/gh/microsphere-projects/microsphere-build/branch/main/graph/badge.svg)](https://app.codecov.io/gh/microsphere-projects/microsphere-build)
 ![Maven](https://img.shields.io/maven-central/v/io.github.microsphere-projects/microsphere-build.svg)
 ![License](https://img.shields.io/github/license/microsphere-projects/microsphere-build.svg)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/microsphere-projects/microsphere-build.svg)](http://isitmaintained.com/project/microsphere-projects/microsphere-build "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/microsphere-projects/microsphere-build.svg)](http://isitmaintained.com/project/microsphere-projects/microsphere-build "Percentage of issues still open")
+
 
 ## Introduction
 
