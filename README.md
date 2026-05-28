@@ -177,6 +177,6 @@ The root project's pom.xml should set the parent as follows:
     <parent>
         <groupId>io.github.microsphere-projects</groupId>
         <artifactId>microsphere-build</artifactId>
-        <version>0.2.3</version>
+        <version>0.3.0</version>
     </parent>
 ```
