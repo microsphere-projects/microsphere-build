@@ -51,4 +51,18 @@
 
 ---
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.8...0.2.9
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.8...0.2.9## v0.3.0
+
+# Release Notes for Version 0.3.0
+
+## Dependency Updates
+- **Updated:** `org.apache.maven.plugins:maven-surefire-plugin` from `3.5.5` to `3.5.6`. (#167)
+- **Updated:** `org.apache.maven.plugins:maven-failsafe-plugin` from `3.5.5` to `3.5.6`. (#166)
+
+## Documentation
+- **Synced:** Plugin versions in `README.md` with `pom.xml` for improved consistency. (c6e89fd, 1a25fd6)
+
+## Other Changes
+- Internal merges between branches and version bumps after publishing v0.2.9.  
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.9...0.3.0
