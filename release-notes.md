@@ -76,4 +76,14 @@
 - Merged `main` into `release` and vice versa to sync branches.  
 - Updated version to prepare for post-`0.3.0` development.  
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.0...0.3.1
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.0...0.3.1## v0.3.2
+
+```markdown
+# Release Notes - Version 0.3.2
+
+## Other Changes
+- **Chore**: Bump version to next patch after publishing 0.3.1.
+
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.1...0.3.2
