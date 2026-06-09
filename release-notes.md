@@ -86,4 +86,18 @@
 
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.1...0.3.2
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.1...0.3.2## v0.3.3
+
+# Release Notes - Version 0.3.3
+
+## Dependency Updates
+- **jacoco-maven-plugin**: Bumped version from `0.8.14` to `0.8.15`. [#169](https://github.com/microsphere-projects/pull/169)
+
+## Build and Workflow Enhancements
+- Synchronized `main` and `release` branches. *(No user-facing changes)*
+
+---
+
+No other changes or new features introduced in this release.
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.2...0.3.3
