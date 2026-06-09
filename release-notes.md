@@ -65,4 +65,25 @@
 ## Other Changes
 - Internal merges between branches and version bumps after publishing v0.2.9.  
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.9...0.3.0
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.2.9...0.3.0## v0.3.1
+
+# Release Notes - Version 0.3.1
+
+## Dependency Updates
+- Bumped `com.puppycrawl.tools:checkstyle` from `13.4.2` to `13.5.0`. ([#168](https://github.com/microsphere-projects/pull/168))
+
+## Build and Workflow Enhancements
+- Merged `main` into `release` and vice versa to sync branches.  
+- Updated version to prepare for post-`0.3.0` development.  
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.0...0.3.1## v0.3.2
+
+```markdown
+# Release Notes - Version 0.3.2
+
+## Other Changes
+- **Chore**: Bump version to next patch after publishing 0.3.1.
+
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.1...0.3.2
