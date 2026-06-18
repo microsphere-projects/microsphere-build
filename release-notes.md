@@ -100,4 +100,18 @@
 
 No other changes or new features introduced in this release.
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.2...0.3.3
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.2...0.3.3## v0.3.4
+
+# Release Notes - Version 0.3.4
+
+## Dependency Updates
+- **checkstyle**: Bumped from `13.5.0` to `13.6.0` ([#170](https://github.com/microsphere-projects/pull/170))
+- **central-publishing-maven-plugin**: Bumped to `0.11.0` ([#171](https://github.com/microsphere-projects/pull/171))
+
+## Documentation
+- Synced plugin versions in `README.md` with `pom.xml` ([c2e952c](https://github.com/microsphere-projects/commit/c2e952c))
+
+## Other Changes
+- Version bumped to `0.3.4` with post-release prep ([381324b](https://github.com/microsphere-projects/commit/381324b))  
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.3...0.3.4
