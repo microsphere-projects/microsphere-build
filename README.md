@@ -48,7 +48,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 - [Maven Enforce Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) (3.6.3)
 - [Maven GPG Plugin](https://maven.apache.org/plugins/maven-gpg-plugin/) (3.2.8)
 - [Git Commit Id Plugin](https://github.com/git-commit-id/git-commit-id-maven-plugin) (4.9.10)
-- [Central Publishing Maven Plugin](https://central.sonatype.com/artifact/org.sonatype.central/central-publishing-maven-plugin) (0.10.0)
+- [Central Publishing Maven Plugin](https://central.sonatype.com/artifact/org.sonatype.central/central-publishing-maven-plugin) (0.11.0)
 
 > As of June 30, 2025 OSSRH has reached end of life and has been shut down. All OSSRH namespaces have been migrated to [Central Publisher Portal](https://central.sonatype.org/pages/ossrh-eol/).
 > 
