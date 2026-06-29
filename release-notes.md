@@ -114,4 +114,23 @@ No other changes or new features introduced in this release.
 ## Other Changes
 - Version bumped to `0.3.4` with post-release prep ([381324b](https://github.com/microsphere-projects/commit/381324b))  
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.3...0.3.4
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.3...0.3.4## v0.3.5
+
+# Release Notes for Version 0.3.5
+
+## Dependency Updates
+- Updated `com.puppycrawl.tools:checkstyle` from 13.6.0 to 13.7.0. ([#173](https://github.com/microsphere-projects/pull/173))
+- Updated `org.junit.jupiter:junit-jupiter` from 6.1.0 to 6.1.1. ([#172](https://github.com/microsphere-projects/pull/172))
+
+## Documentation
+- Synchronized plugin versions in the `README.md` with `pom.xml`. ([3e0f70a](https://github.com/microsphere-projects/commit/3e0f70a))
+
+## Build and Workflow Enhancements
+- Merged main branch into release branch to keep branches in sync. ([14bec13](https://github.com/microsphere-projects/commit/14bec13), [8a8b92b](https://github.com/microsphere-projects/commit/8a8b92b))
+- Bumped project version to the next patch after publishing v0.3.4. ([4cc0e4c](https://github.com/microsphere-projects/commit/4cc0e4c))
+
+---
+
+**Note:** Minor updates and maintenance-related changes included.
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.4...0.3.5
