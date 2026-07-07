@@ -37,6 +37,7 @@ jobs:
       - name: Build with Maven
         run: mvn
           --batch-mode
+          --debug
           --update-snapshots
           --file pom.xml
           -Drevision=0.0.1-SNAPSHOT
