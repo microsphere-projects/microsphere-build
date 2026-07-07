@@ -157,4 +157,17 @@ No other changes or new features introduced in this release.
 - Merged `release` into main. ([d4b488e](#))
 - Bumped version to next patch after publishing `0.3.6`. ([0cb5858](#))
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.6...0.3.7
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.6...0.3.7## v0.3.8
+
+# Release Notes - Version 0.3.8
+
+## Build and Workflow Enhancements
+- Enabled Maven debug logging in CI builds to improve build diagnostics. (#3b42ed0)
+
+## Other Changes
+- Refined compiler configuration for Java 17 profile for better compatibility and performance. (#2043c70)
+- Version bumped to prepare for future development. (#ddc05e3)
+
+---
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.7...0.3.8
