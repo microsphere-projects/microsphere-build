@@ -121,8 +121,6 @@
         <!-- Arguments Line -->
         <jvm.argLine/>
         <jacoco.argLine/>
-        <compiler.fork>false</compiler.fork>
-        <compiler.arg/>
     </properties>
 
     <build>
@@ -133,11 +131,7 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
-                        <fork>${compiler.fork}</fork>
-                        <compilerArgs>
-                            <compilerArg>-parameters</compilerArg>
-                            <arg>${compiler.arg}</arg>
-                        </compilerArgs>
+                        <parameters>true</parameters>
                         <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
                         <encoding>${file.encoding}</encoding>
@@ -725,8 +719,6 @@
             </activation>
             <properties>
                 <maven.compiler.release>${java.version}</maven.compiler.release>
-                <compiler.fork>true</compiler.fork>
-                <compiler.arg>-J${jvm.argLine}</compiler.arg>
             </properties>
         </profile>
 
@@ -776,6 +768,23 @@
                     --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
                 </jvm.argLine>
             </properties>
+            <build>
+                <pluginManagement>
+                    <plugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-compiler-plugin</artifactId>
+                            <configuration>
+                                <fork>true</fork>
+                                <compilerArgs>
+                                    <compilerArg>-J--add-opens=java.base/java.lang=ALL-UNNAMED</compilerArg>
+                                    <compilerArg>-J--add-opens=java.base/java.lang.invoke=ALL-UNNAMED</compilerArg>
+                                </compilerArgs>
+                            </configuration>
+                        </plugin>
+                    </plugins>
+                </pluginManagement>
+            </build>
         </profile>
 
         <profile>
