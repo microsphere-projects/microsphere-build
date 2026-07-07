@@ -133,4 +133,16 @@ No other changes or new features introduced in this release.
 
 **Note:** Minor updates and maintenance-related changes included.
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.4...0.3.5
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.4...0.3.5## v0.3.6
+
+# Release Notes - Version 0.3.6
+
+## Build and Workflow Enhancements
+- Pass JDK-specific JVM arguments to `javac` for improved compatibility. ([9624c62](#))
+
+## Other Changes
+- Merged `main` into `release`. ([4df5818](#))
+- Merged `release` back into `main`. ([4e62e6b](#))
+- Bumped version to prepare for the next patch release. ([d4470e5](#)) 
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.5...0.3.6
