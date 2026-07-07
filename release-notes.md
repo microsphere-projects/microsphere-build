@@ -145,4 +145,16 @@ No other changes or new features introduced in this release.
 - Merged `release` back into `main`. ([4e62e6b](#))
 - Bumped version to prepare for the next patch release. ([d4470e5](#)) 
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.5...0.3.6
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.5...0.3.6## v0.3.7
+
+# Release Notes - Version 0.3.7
+
+## Build and Workflow Enhancements
+- Scoped compiler JVM arguments to the Java 8 profile. ([ef6f861](#))
+
+## Other Changes
+- Merged `main` into release. ([680e588](#))
+- Merged `release` into main. ([d4b488e](#))
+- Bumped version to next patch after publishing `0.3.6`. ([0cb5858](#))
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.6...0.3.7
