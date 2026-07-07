@@ -46,7 +46,7 @@
     </scm>
 
     <properties>
-        <revision>0.3.5-SNAPSHOT</revision>
+        <revision>0.3.6-SNAPSHOT</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -121,7 +121,8 @@
         <!-- Arguments Line -->
         <jvm.argLine/>
         <jacoco.argLine/>
-
+        <compiler.fork>false</compiler.fork>
+        <compiler.arg>-J${jvm.argLine}</compiler.arg>
     </properties>
 
     <build>
@@ -132,8 +133,10 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven-compiler-plugin.version}</version>
                     <configuration>
+                        <fork>${compiler.fork}</fork>
                         <compilerArgs>
                             <compilerArg>-parameters</compilerArg>
+                            <arg>${compiler.arg}</arg>
                         </compilerArgs>
                         <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
@@ -755,9 +758,8 @@
                 <jdk>[9,15]</jdk>
             </activation>
             <properties>
-                <jvm.argLine>
-                    --illegal-access=permit
-                </jvm.argLine>
+                <jvm.argLine>--illegal-access=permit</jvm.argLine>
+                <compiler.fork>true</compiler.fork>
             </properties>
         </profile>
 
@@ -767,9 +769,8 @@
                 <jdk>[16,)</jdk>
             </activation>
             <properties>
-                <jvm.argLine>
-                    --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED
-                </jvm.argLine>
+                <jvm.argLine>--add-opens=java.base/java.lang.invoke=ALL-UNNAMED</jvm.argLine>
+                <compiler.fork>true</compiler.fork>
             </properties>
         </profile>
 
