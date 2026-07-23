@@ -46,7 +46,7 @@
     </scm>
 
     <properties>
-        <revision>0.3.9-SNAPSHOT</revision>
+        <revision>0.3.10-SNAPSHOT</revision>
         <java.version>8</java.version>
         <resource.delimiter>@</resource.delimiter>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -76,7 +76,7 @@
         <maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
         <maven-javadoc-plugin.version>3.12.0</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.4.0</maven-source-plugin.version>
-        <maven-jar-plugin.version>3.5.0</maven-jar-plugin.version>
+        <maven-jar-plugin.version>3.5.1</maven-jar-plugin.version>
         <maven-war-plugin.version>3.5.1</maven-war-plugin.version>
         <maven-deploy-plugin.version>3.1.4</maven-deploy-plugin.version>
         <maven-share-plugin.version>3.6.2</maven-share-plugin.version>

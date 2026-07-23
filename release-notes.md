@@ -170,4 +170,19 @@ No other changes or new features introduced in this release.
 
 ---
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.7...0.3.8
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.7...0.3.8## v0.3.9
+
+# Release Notes - Version 0.3.9
+
+## Dependency Updates
+- **Checkstyle:** Upgraded from `13.7.0` to `13.8.0`. [#175](https://github.com/microsphere-projects/issues/175)
+- **JUnit Jupiter:** Upgraded from `6.1.1` to `6.1.2`. [#174](https://github.com/microsphere-projects/issues/174)
+
+## Build and Workflow Enhancements
+- Merged main branch into the release branch to keep versions aligned. [#32be67d](https://github.com/microsphere-projects/commit/32be67d)  
+
+---
+
+No new features, bug fixes, or documentation updates in this release. 
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.8...0.3.9
