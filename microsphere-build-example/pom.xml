@@ -17,7 +17,7 @@
     <name>Microsphere :: Build :: Example</name>
     <description>Microsphere Build Example Project - validates profiles and Maven plugins</description>
     <properties>
-        <junit.version>6.1.1</junit.version>
+        <junit.version>6.1.2</junit.version>
     </properties>
 
     <dependencies>
