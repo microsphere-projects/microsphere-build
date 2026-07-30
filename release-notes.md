@@ -185,4 +185,19 @@ No other changes or new features introduced in this release.
 
 No new features, bug fixes, or documentation updates in this release. 
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.8...0.3.9
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.8...0.3.9## v0.3.10
+
+# Release Notes - Version 0.3.10
+
+## Dependency Updates
+- Bumped `org.apache.maven.plugins:maven-jar-plugin` from `3.5.0` to `3.5.1`. ([#176](https://github.com/microsphere-projects/microsphere/pull/176))
+
+## Build and Workflow Enhancements
+- Merged `main` into `release` and vice versa to synchronize changes. ([05b9d6e](https://github.com/microsphere-projects/microsphere/commit/05b9d6e), [9985c83](https://github.com/microsphere-projects/microsphere/commit/9985c83))
+- Updated version to prepare for the next patch release after publishing `0.3.9`. ([005ea6b](https://github.com/microsphere-projects/microsphere/commit/005ea6b)) 
+
+---
+
+No new features, bug fixes, documentation, or test improvements included in this release.
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.9...0.3.10
