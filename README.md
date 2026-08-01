@@ -37,7 +37,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 - [Maven Compiler Plugin](https://maven.apache.org/plugins/maven-compiler-plugin/) (3.15.0)
 - [Maven Source Plugin](https://maven.apache.org/plugins/maven-source-plugin/) (3.4.0)
-- [Flatten Maven Plugin](https://www.mojohaus.org/flatten-maven-plugin/) (1.7.3)
+- [Flatten Maven Plugin](https://www.mojohaus.org/flatten-maven-plugin/) (1.8.0)
 
 #### Profile-Specific Plugins
 
