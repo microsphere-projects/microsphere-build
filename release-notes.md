@@ -200,4 +200,20 @@ No new features, bug fixes, or documentation updates in this release.
 
 No new features, bug fixes, documentation, or test improvements included in this release.
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.9...0.3.10
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.9...0.3.10## v0.3.11
+
+# Release Notes for v0.3.11
+
+## Dependency Updates
+- Bumped `com.puppycrawl.tools:checkstyle` from `13.8.0` to `13.9.0`. ([#178](https://github.com/microsphere-projects))
+
+## Build and Workflow Enhancements
+- Merged `main` branch into `release`. [skip ci]
+- Merged `release` branch back into `main`. [skip ci]
+- Updated version to the next patch after publishing `0.3.10`.
+
+---
+
+No other significant changes in this release.
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.10...0.3.11
