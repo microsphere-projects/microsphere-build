@@ -85,7 +85,7 @@ jobs:
               "Be concise and clear."
           )
           
-          copilot_url = "https://://github.com/copilot/chat/completions"
+          copilot_url = "https://github.com/copilot/chat/completions"
           copilot_headers = {
             "Authorization": f"Bearer {copilot_key}",
             "Accept": "application/vnd.github+json",
