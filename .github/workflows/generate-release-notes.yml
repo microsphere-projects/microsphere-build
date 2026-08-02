@@ -73,6 +73,7 @@ jobs:
           prev_tag    = os.environ['PREV_TAG_DATA']
           commits     = os.environ['COMMITS_DATA']
           token       = os.environ['GH_TOKEN']
+          copilot_key = os.getenv("COPILOT_API_KEY")
 
           prompt = (
               f"Generate concise release notes for version {current_tag}.\n\n"
@@ -82,28 +83,32 @@ jobs:
               "and Other Changes(excludes Full Changelog).\n\n"
               "Be concise and clear."
           )
+          
+          copilot_url = "https://githubcopilot.com"
+          copilot_headers = {
+            "Authorization": f"Bearer {copilot_key}",
+            "Content-Type": "application/json"
+          }
 
-          payload = json.dumps({
-              "model": "openai/gpt-4o",
-              "messages": [{"role": "user", "content": prompt}]
-          }).encode()
-
-          req = urllib.request.Request(
-              "https://models.github.ai/inference/chat/completions",
-              data=payload,
-              headers={
-                  "Content-Type": "application/json",
-                  "Authorization": f"Bearer {token}"
+          payload = {
+            "model": "copilot-gpt-4",
+            "messages": [
+              {
+                "role": "system",
+                "content": "You are an expert software engineer generating a clear, technical commit summary."
+              },
+              {
+                "role": "user",
+                "content": prompt
               }
-          )
+            ]
+          }
 
           try:
-              with urllib.request.urlopen(req) as resp:
-                  data = json.loads(resp.read())
-                  if "choices" in data and len(data["choices"]) > 0:
-                      print(data["choices"][0]["message"]["content"])
-                  else:
-                      raise ValueError("Invalid response structure from Copilot API")
+              response = requests.post(copilot_url, json=payload, headers=copilot_headers)
+              response.raise_for_status()
+              copilot_summary = response.json()['choices']['message']['content']
+              print(copilot_summary)
           except Exception as e:
               print(f"Failed to generate summary via Copilot: {e}", file=sys.stderr)
               print(f"_Release notes generation failed. Raw commits since {prev_tag}:_\n\n```\n{commits}\n```")
