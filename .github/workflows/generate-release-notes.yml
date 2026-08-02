@@ -67,8 +67,8 @@ jobs:
 
           # Call GitHub Copilot via GitHub Models API and capture the summary
           SUMMARY=$(python3 << 'PYEOF'
-          import json, os, urllib.request, sys
-
+          import json, os, urllib.request, sys, re, requests
+          
           current_tag = os.environ['CURRENT_TAG_DATA']
           prev_tag    = os.environ['PREV_TAG_DATA']
           commits     = os.environ['COMMITS_DATA']
