@@ -25,7 +25,6 @@ jobs:
       contents: write
       pull-requests: read
       models: read
-      copilot: read
 
     steps:
       - name: Checkout Source
