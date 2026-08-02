@@ -65,7 +65,7 @@ jobs:
     needs: build
     permissions:
       contents: write
-      models: read
+      pull-requests: read
     steps:
       - name: Checkout Source
         uses: actions/checkout@v5
@@ -141,7 +141,10 @@ jobs:
           try:
               with urllib.request.urlopen(req) as resp:
                   data = json.loads(resp.read())
-                  print(data["choices"][0]["message"]["content"])
+                  if "choices" in data and len(data["choices"]) > 0:
+                      print(data["choices"][0]["message"]["content"])
+                  else:
+                      raise ValueError("Invalid response structure from Copilot API")
           except Exception as e:
               print(f"Failed to generate summary via Copilot: {e}", file=sys.stderr)
               print(f"_Release notes generation failed. Raw commits since {prev_tag}:_\n\n```\n{commits}\n```")
