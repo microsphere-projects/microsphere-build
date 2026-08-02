@@ -66,6 +66,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: read
+      models: read
     steps:
       - name: Checkout Source
         uses: actions/checkout@v5
@@ -125,12 +126,12 @@ jobs:
           )
 
           payload = json.dumps({
-              "model": "gpt-4o",
+              "model": "openai/gpt-4o",
               "messages": [{"role": "user", "content": prompt}]
           }).encode()
 
           req = urllib.request.Request(
-              "https://models.inference.ai.azure.com/chat/completions",
+              "https://models.github.ai/inference/chat/completions",
               data=payload,
               headers={
                   "Content-Type": "application/json",
