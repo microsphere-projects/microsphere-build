@@ -216,4 +216,47 @@ No new features, bug fixes, documentation, or test improvements included in this
 
 No other significant changes in this release.
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.10...0.3.11
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.10...0.3.11## v0.3.12
+
+_Release notes generation failed. Raw commits since 0.3.11:_
+
+```
+904e675 chore: merge main into release [skip ci]
+2c514bf Merge pull request #182 from microsphere-projects/dependabot/maven/org.junit.jupiter-junit-jupiter-6.1.3
+c79a1ff Bump org.junit.jupiter:junit-jupiter from 6.1.2 to 6.1.3
+54ebef0 chore: merge main into release [skip ci]
+761711b Fix Copilot API URL in release notes workflow
+0d5cee9 chore: merge main into release [skip ci]
+705e7f8 Remove Copilot permission from release notes job
+f8c2d30 chore: merge main into release [skip ci]
+f162779 Update release notes workflow Copilot API call
+b0aa82c chore: merge main into release [skip ci]
+e5688bc Add missing imports in release notes workflow
+2ddf5e6 chore: merge main into release [skip ci]
+74c51bf Use Copilot API for release note summaries
+9214a36 chore: merge main into release [skip ci]
+9b6cb6f Update release notes workflow for Models API
+6ee95e3 chore: merge main into release [skip ci]
+99cda77 Merge pull request #180 from microsphere-projects/copilot/generate-release-notes
+30939ba Use correct GitHub Models API endpoint with v1/chat/completions path
+f36a3cd chore: merge main into release [skip ci]
+8856cbc Update release notes AI API endpoint
+3b24c89 chore: merge main into release [skip ci]
+0c9f8eb Add release notes generation workflow
+ec6b944 chore: merge main into release [skip ci]
+2c59d15 Merge pull request #179 from microsphere-projects/copilot/update-python-script-action-file
+742af5a Update permissions for GitHub Copilot Summary integration
+d16f1b3 chore: merge main into release [skip ci]
+d4b7f77 docs: sync plugin versions in README.md from pom.xml [skip ci]
+6076756 Downgrade flatten-maven-plugin to 1.7.3
+f4a14ab chore: merge main into release [skip ci]
+077b42b docs: sync plugin versions in README.md from pom.xml [skip ci]
+7dfa3fd Merge pull request #177 from microsphere-projects/dependabot/maven/org.codehaus.mojo-flatten-maven-plugin-1.8.0
+9723d75 chore: merge main into release [skip ci]
+ea2f5d9 Bump Maven wrapper to 3.9.16
+0ede364 chore: merge release into main [skip ci]
+c1bc7fe chore: bump version to next patch after publishing 0.3.11
+6a9f8c6 Bump org.codehaus.mojo:flatten-maven-plugin from 1.7.3 to 1.8.0
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.11...0.3.12
