@@ -259,4 +259,16 @@ c1bc7fe chore: bump version to next patch after publishing 0.3.11
 6a9f8c6 Bump org.codehaus.mojo:flatten-maven-plugin from 1.7.3 to 1.8.0
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.11...0.3.12
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.11...0.3.12## v0.3.13
+
+_Release notes generation failed. Raw commits since 0.3.12:_
+
+```
+52e5510 chore: merge main into release [skip ci]
+85a3b78 Merge pull request #184 from microsphere-projects/dependabot/maven/com.puppycrawl.tools-checkstyle-13.11.0
+b4531fd Bump com.puppycrawl.tools:checkstyle from 13.9.0 to 13.11.0
+2ad677b chore: merge release into main [skip ci]
+a256b95 chore: bump version to next patch after publishing 0.3.12
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.12...0.3.13
