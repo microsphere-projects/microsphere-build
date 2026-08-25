@@ -271,4 +271,16 @@ b4531fd Bump com.puppycrawl.tools:checkstyle from 13.9.0 to 13.11.0
 a256b95 chore: bump version to next patch after publishing 0.3.12
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.12...0.3.13
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.12...0.3.13## v0.3.14
+
+_Release notes generation failed. Raw commits since 0.3.13:_
+
+```
+6715866 chore: merge main into release [skip ci]
+9ffbb74 Merge pull request #185 from microsphere-projects/dependabot/maven/com.puppycrawl.tools-checkstyle-14.0.0
+87173d6 Bump com.puppycrawl.tools:checkstyle from 13.11.0 to 14.0.0
+e65bf69 chore: merge release into main [skip ci]
+0b29a98 chore: bump version to next patch after publishing 0.3.13
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.13...0.3.14
