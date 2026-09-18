@@ -283,4 +283,29 @@ e65bf69 chore: merge release into main [skip ci]
 0b29a98 chore: bump version to next patch after publishing 0.3.13
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.13...0.3.14
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.13...0.3.14## v0.3.15
+
+_Release notes generation failed. Raw commits since 0.3.14:_
+
+```
+66b6699 chore: merge main into release [skip ci]
+470bd43 Merge pull request #186 from microsphere-projects/dependabot/maven/com.puppycrawl.tools-checkstyle-14.1.0
+5a76d7b docs: sync plugin versions in README.md from pom.xml [skip ci]
+5b62b87 chore: merge main into release [skip ci]
+fab3ce1 Merge pull request #187 from microsphere-projects/dependabot/maven/org.apache.maven.plugins-maven-compiler-plugin-3.16.0
+cc6777c chore: merge main into release [skip ci]
+85d3109 docs: sync plugin versions in README.md from pom.xml [skip ci]
+39d1940 Merge pull request #188 from microsphere-projects/dependabot/maven/org.apache.maven.plugins-maven-surefire-plugin-3.6.0
+eeff410 Merge branch 'main' into dependabot/maven/org.apache.maven.plugins-maven-surefire-plugin-3.6.0
+293e1b6 docs: sync plugin versions in README.md from pom.xml [skip ci]
+2f467dd chore: merge main into release [skip ci]
+9750d22 Merge pull request #189 from microsphere-projects/dependabot/maven/org.apache.maven.plugins-maven-failsafe-plugin-3.6.0
+3ab46e4 Bump org.apache.maven.plugins:maven-failsafe-plugin from 3.5.6 to 3.6.0
+8c3425d Bump org.apache.maven.plugins:maven-surefire-plugin from 3.5.6 to 3.6.0
+09af093 Bump org.apache.maven.plugins:maven-compiler-plugin
+454f571 Bump com.puppycrawl.tools:checkstyle from 14.0.0 to 14.1.0
+26b395b chore: merge release into main [skip ci]
+e748772 chore: bump version to next patch after publishing 0.3.14
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.14...0.3.15
