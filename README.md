@@ -83,7 +83,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 - [Asciidoctor Maven Plugin](https://github.com/asciidoctor/asciidoctor-maven-plugin) (3.2.0)
 - [Docbkx Maven Plugin](https://github.com/mimil/docbkx-tools) (2.0.17)
-- [Build Helper Maven Plugin](https://www.mojohaus.org/build-helper-maven-plugin/) (3.6.1)
+- [Build Helper Maven Plugin](https://www.mojohaus.org/build-helper-maven-plugin/) (3.6.2)
 
 ### Profiles Management
 
