@@ -67,7 +67,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 ##### Maven Profile `ci` Plugins
 
-- [Sign Maven Plugin](https://www.simplify4u.org/sign-maven-plugin/) (1.1.0)
+- [Sign Maven Plugin](https://www.simplify4u.org/sign-maven-plugin/) (1.2.0)
 
 ##### Maven Profile `test` Plugins
 
