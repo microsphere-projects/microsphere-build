@@ -308,4 +308,24 @@ eeff410 Merge branch 'main' into dependabot/maven/org.apache.maven.plugins-maven
 e748772 chore: bump version to next patch after publishing 0.3.14
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.14...0.3.15
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.14...0.3.15## v0.3.16
+
+_Release notes generation failed. Raw commits since 0.3.15:_
+
+```
+e3dc027 chore: merge main into release [skip ci]
+7703a4b Merge pull request #191 from microsphere-projects/dependabot/maven/org.apache.maven.plugins-maven-deploy-plugin-3.2.0
+2716f19 chore: merge main into release [skip ci]
+562b71c docs: sync plugin versions in README.md from pom.xml [skip ci]
+e374bdb Merge pull request #192 from microsphere-projects/dependabot/maven/org.simplify4u.plugins-sign-maven-plugin-1.2.0
+2daabf5 docs: sync plugin versions in README.md from pom.xml [skip ci]
+2fb8a44 chore: merge main into release [skip ci]
+83c3535 Merge pull request #190 from microsphere-projects/dependabot/maven/org.codehaus.mojo-build-helper-maven-plugin-3.6.2
+2bbd97c Bump org.simplify4u.plugins:sign-maven-plugin from 1.1.0 to 1.2.0
+3938efb Bump org.apache.maven.plugins:maven-deploy-plugin from 3.1.4 to 3.2.0
+c2d3e21 Bump org.codehaus.mojo:build-helper-maven-plugin from 3.6.1 to 3.6.2
+093d32e chore: merge release into main [skip ci]
+32813ef chore: bump version to next patch after publishing 0.3.15
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.15...0.3.16
