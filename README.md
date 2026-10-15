@@ -14,6 +14,15 @@ Microsphere Projects, like [Microsphere Java](https://github.com/microsphere-pro
 [Microsphere Spring](https://github.com/microsphere-projects/microsphere-spring), etc.
 
 
+## Documentation
+
+| Guide | Audience | English | 简体中文 |
+|---|---|---|---|
+| User Guide | Projects inheriting this parent POM | [docs/user-guide/current/README.md](docs/user-guide/current/README.md) | [中文](docs/user-guide/current/zh/README.md) |
+| Developer Guide | Maintainers of this repository | [docs/developer-guide/current/README.md](docs/developer-guide/current/README.md) | [中文](docs/developer-guide/current/zh/README.md) |
+
+Documentation index (branches and languages): [docs/README.md](docs/README.md) · [文档总索引（中文）](docs/zh/README.md)
+
 ## Features
 
 Microsphere Build supports the following features:

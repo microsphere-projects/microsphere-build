@@ -328,4 +328,30 @@ c2d3e21 Bump org.codehaus.mojo:build-helper-maven-plugin from 3.6.1 to 3.6.2
 32813ef chore: bump version to next patch after publishing 0.3.15
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.15...0.3.16
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.15...0.3.16## v0.3.17
+
+_Release notes generation failed. Raw commits since 0.3.16:_
+
+```
+9bd3d2f chore: merge main into release [skip ci]
+36195f4 Merge pull request #195 from microsphere-projects/revert-193-dependabot/maven/org.apache.maven-apache-maven-3.10.0
+d139217 Revert "Bump org.apache.maven:apache-maven from 3.9.16 to 3.10.0"
+2e40fa4 chore: merge main into release [skip ci]
+f9a4faf Skip deploy for build example module
+5645eb3 chore: merge main into release [skip ci]
+b1760f7 Merge pull request #194 from microsphere-projects/dependabot/maven/com.puppycrawl.tools-checkstyle-14.3.0
+c12b4f0 chore: merge main into release [skip ci]
+d531476 Merge pull request #193 from microsphere-projects/dependabot/maven/org.apache.maven-apache-maven-3.10.0
+f7ed6ff Bump com.puppycrawl.tools:checkstyle from 14.1.0 to 14.3.0
+e970690 Bump org.apache.maven:apache-maven from 3.9.16 to 3.10.0
+f1c3db1 chore: merge main into release [skip ci]
+e01373c Enable Dependabot GitHub Actions updates
+452ea00 chore: merge main into release [skip ci]
+75cbd8a Bump GitHub Actions in CI workflows
+e255063 chore: merge main into release [skip ci]
+05e942e Upgrade setup-java action to v6.0.1
+0497ba5 chore: merge release into main [skip ci]
+ec5e70f chore: bump version to next patch after publishing 0.3.16
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.16...0.3.17
