@@ -21,7 +21,7 @@ real unit tests and real coverage during the build.
 | Method | Signature | Contract |
 |---|---|---|
 | `greet` | `public String greet(String name)` | Returns `"Hello, <name>!"`. Throws `IllegalArgumentException` when `name` is `null` or empty. |
-| `getJavaVersion` | `public String getJavaVersion` | Returns the JVM's `java.specification.version` system property (e.g. `"17"`). Never `null` on any supported JDK. |
+| `getJavaVersion` | `public String getJavaVersion()` | Returns the JVM's `java.specification.version` system property (e.g. `"17"`). Never `null` on any supported JDK. |
 
 ```java
 public class ExampleService {
