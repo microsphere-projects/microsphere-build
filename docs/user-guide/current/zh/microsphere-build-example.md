@@ -21,7 +21,7 @@
 | 方法 | 签名 | 契约 |
 |---|---|---|
 | `greet` | `public String greet(String name)` | 返回 `"Hello, <name>!"`。当 `name` 为 `null` 或空字符串时抛出 `IllegalArgumentException`。 |
-| `getJavaVersion` | `public String getJavaVersion` | 返回 JVM 的 `java.specification.version` 系统属性（例如 `"17"`）。在任何受支持的 JDK 上都不会是 `null`。 |
+| `getJavaVersion` | `public String getJavaVersion()` | 返回 JVM 的 `java.specification.version` 系统属性（例如 `"17"`）。在任何受支持的 JDK 上都不会是 `null`。 |
 
 ```java
 public class ExampleService {
