@@ -82,7 +82,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 - [Maven Failsafe Plugin](https://maven.apache.org/surefire/maven-failsafe-plugin/) (3.6.0)
 - [Maven Checkstyle Plugin](https://maven.apache.org/plugins/maven-checkstyle-plugin/) (3.6.0)
-- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) (3.6.0)
+- [Maven Surefire Plugin](https://maven.apache.org/surefire/maven-surefire-plugin/) (3.6.1)
 
 ##### Maven Profile `coverage` Plugins
 
