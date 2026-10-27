@@ -354,4 +354,34 @@ e255063 chore: merge main into release [skip ci]
 ec5e70f chore: bump version to next patch after publishing 0.3.16
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.16...0.3.17
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.16...0.3.17## v1.0.1
+
+_Release notes generation failed. Raw commits since 0.3.17:_
+
+```
+e86036d chore: merge main into release [skip ci]
+7998d57 Merge pull request #196 from microsphere-projects/dependabot/maven/org.sonatype.central-central-publishing-maven-plugin-0.12.0
+961b7b1 chore: merge main into release [skip ci]
+b4a312e docs: sync plugin versions in README.md from pom.xml [skip ci]
+e28e162 Merge pull request #198 from microsphere-projects/dependabot/maven/org.apache.maven.plugins-maven-failsafe-plugin-3.6.1
+12bd83a Merge branch 'main' into dependabot/maven/org.apache.maven.plugins-maven-failsafe-plugin-3.6.1
+2d5cbd0 chore: merge main into release [skip ci]
+6159ac2 docs: sync plugin versions in README.md from pom.xml [skip ci]
+dcca8f1 Merge pull request #199 from microsphere-projects/dependabot/maven/org.apache.maven.plugins-maven-surefire-plugin-3.6.1
+c17dd1d chore: merge main into release [skip ci]
+8bf9858 Merge pull request #197 from microsphere-projects/dependabot/github_actions/actions/setup-java-6.1.0
+f7696b1 Bump org.apache.maven.plugins:maven-surefire-plugin from 3.6.0 to 3.6.1
+d776bcc Bump org.apache.maven.plugins:maven-failsafe-plugin from 3.6.0 to 3.6.1
+d287952 chore: merge main into release [skip ci]
+d4b3916 Update .gitignore
+e15c0ac Bump actions/setup-java from 6.0.1 to 6.1.0
+3620499 Bump org.sonatype.central:central-publishing-maven-plugin
+d888cd0 chore: merge main into release [skip ci]
+78f6b18 Fix getJavaVersion signature in docs
+0bcff51 chore: merge main into release [skip ci]
+46973c2 Add bilingual user and developer docs
+54fe1b8 chore: merge release into main [skip ci]
+dc62999 chore: bump version to next patch after publishing 0.3.17
+```
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.17...1.0.1
