@@ -86,7 +86,7 @@ Microsphere Build supports the Maven project building on Java TLS versions:
 
 ##### Maven Profile `coverage` Plugins
 
-- [Maven JaCoCo Plugin](https://www.eclemma.org/jacoco/) (0.8.15)
+- [Maven JaCoCo Plugin](https://www.eclemma.org/jacoco/) (0.8.16)
 
 ##### Maven Profile `docs` Plugins
 
