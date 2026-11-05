@@ -384,4 +384,22 @@ d888cd0 chore: merge main into release [skip ci]
 dc62999 chore: bump version to next patch after publishing 0.3.17
 ```
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.17...1.0.1
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/0.3.17...1.0.1## v1.0.2
+
+## Dependency Updates
+- Bump `checkstyle` from 14.3.0 to 14.4.0
+- Bump `maven-enforcer-plugin` from 3.6.3 to 3.7.0
+- Bump `jacoco-maven-plugin` from 0.8.15 to 0.8.16
+
+## Documentations
+- Sync plugin versions in `README.md` from `pom.xml`
+
+## Build and Workflow Enhancements
+- Update `maven-publish.yml` workflow
+
+## Other Changes
+- Merge `main` into `release` branch (multiple)
+- Merge `release` into `main`
+- Bump version to next patch after publishing 1.0.1
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/1.0.1...1.0.2
