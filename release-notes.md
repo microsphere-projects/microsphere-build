@@ -402,4 +402,20 @@ dc62999 chore: bump version to next patch after publishing 0.3.17
 - Merge `release` into `main`
 - Bump version to next patch after publishing 1.0.1
 
-**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/1.0.1...1.0.2
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/1.0.1...1.0.2## v1.0.3
+
+# Release Notes – v1.0.3
+
+## Dependency Updates
+- Bump `org.codehaus.mojo:flatten-maven-plugin` from 1.7.3 to 1.10.0
+- Bump `org.codehaus.mojo:build-helper-maven-plugin` from 3.6.2 to 3.8.0
+- Bump `actions/setup-java` from 6.1.0 to 6.3.0
+
+## Documentations
+- Sync plugin versions in `README.md` with `pom.xml`
+
+## Other Changes
+- Merge main into release branch
+- Bump version to next patch after publishing 1.0.2
+
+**Full Changelog**: https://github.com/microsphere-projects/microsphere-build/compare/1.0.2...1.0.3
